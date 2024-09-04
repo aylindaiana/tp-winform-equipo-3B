@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Marca
 {
-    public class Class1
+    public class Marca
     {
     }
 }

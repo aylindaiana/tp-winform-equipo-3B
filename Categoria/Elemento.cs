@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Categoria
 {
-    public class Class1
+    public class Elemento
     {
     }
 }
