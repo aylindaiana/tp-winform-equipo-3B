@@ -1,0 +1,6 @@
+C:\Users\usuario\Desktop\tp_progra3\GestionDeComercio\Dominio\bin\Debug\Dominio.dll
+C:\Users\usuario\Desktop\tp_progra3\GestionDeComercio\Dominio\bin\Debug\Dominio.pdb
+C:\Users\usuario\Desktop\tp_progra3\GestionDeComercio\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
+C:\Users\usuario\Desktop\tp_progra3\GestionDeComercio\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Desktop\tp_progra3\GestionDeComercio\Dominio\obj\Debug\Dominio.dll
+C:\Users\usuario\Desktop\tp_progra3\GestionDeComercio\Dominio\obj\Debug\Dominio.pdb

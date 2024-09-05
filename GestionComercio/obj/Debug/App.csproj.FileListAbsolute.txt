@@ -1,0 +1,14 @@
+C:\Users\usuario\Desktop\tp_progra3\GestionDeComercio\GestionComercio\bin\Debug\GestionComercio.exe.config
+C:\Users\usuario\Desktop\tp_progra3\GestionDeComercio\GestionComercio\bin\Debug\GestionComercio.exe
+C:\Users\usuario\Desktop\tp_progra3\GestionDeComercio\GestionComercio\bin\Debug\GestionComercio.pdb
+C:\Users\usuario\Desktop\tp_progra3\GestionDeComercio\GestionComercio\bin\Debug\Dominio.dll
+C:\Users\usuario\Desktop\tp_progra3\GestionDeComercio\GestionComercio\bin\Debug\Manager.dll
+C:\Users\usuario\Desktop\tp_progra3\GestionDeComercio\GestionComercio\bin\Debug\Dominio.pdb
+C:\Users\usuario\Desktop\tp_progra3\GestionDeComercio\GestionComercio\bin\Debug\Manager.pdb
+C:\Users\usuario\Desktop\tp_progra3\GestionDeComercio\GestionComercio\obj\Debug\App.csproj.AssemblyReference.cache
+C:\Users\usuario\Desktop\tp_progra3\GestionDeComercio\GestionComercio\obj\Debug\GestionComercio.Properties.Resources.resources
+C:\Users\usuario\Desktop\tp_progra3\GestionDeComercio\GestionComercio\obj\Debug\App.csproj.GenerateResource.cache
+C:\Users\usuario\Desktop\tp_progra3\GestionDeComercio\GestionComercio\obj\Debug\App.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Desktop\tp_progra3\GestionDeComercio\GestionComercio\obj\Debug\App.csproj.Up2Date
+C:\Users\usuario\Desktop\tp_progra3\GestionDeComercio\GestionComercio\obj\Debug\GestionComercio.exe
+C:\Users\usuario\Desktop\tp_progra3\GestionDeComercio\GestionComercio\obj\Debug\GestionComercio.pdb
