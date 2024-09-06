@@ -51,6 +51,7 @@
             this.btnAgregar.TabIndex = 1;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnModificar
             // 
@@ -118,10 +119,10 @@
             // lblBusqueda
             // 
             this.lblBusqueda.AutoSize = true;
-            this.lblBusqueda.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblBusqueda.Location = new System.Drawing.Point(8, 80);
             this.lblBusqueda.Name = "lblBusqueda";
-            this.lblBusqueda.Size = new System.Drawing.Size(70, 20);
+            this.lblBusqueda.Size = new System.Drawing.Size(63, 20);
             this.lblBusqueda.TabIndex = 8;
             this.lblBusqueda.Text = "Buscar:";
             // 
@@ -150,7 +151,7 @@
             this.Controls.Add(this.btnAgregar);
             this.MinimumSize = new System.Drawing.Size(700, 430);
             this.Name = "FrmPrincipal";
-            this.Load += new System.EventHandler(this.FrmPrincipal_Load);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

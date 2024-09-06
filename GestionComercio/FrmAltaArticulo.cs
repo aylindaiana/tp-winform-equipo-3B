@@ -10,17 +10,16 @@ using System.Windows.Forms;
 
 namespace GestionComercio
 {
-    public partial class FrmPrincipal : Form
+    public partial class FrmAltaArticulo : Form
     {
-        public FrmPrincipal()
+        public FrmAltaArticulo()
         {
             InitializeComponent();
         }
 
-        private void btnAgregar_Click(object sender, EventArgs e)
+        private void btnCerrar_Click(object sender, EventArgs e)
         {
-            FrmAltaArticulo alta = new FrmAltaArticulo();
-            alta.ShowDialog();
+            Close();
         }
     }
 }
