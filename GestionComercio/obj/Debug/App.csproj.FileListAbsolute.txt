@@ -27,3 +27,4 @@ C:\Users\BBARRERA\Desktop\repo\GestionDeComercio\GestionComercio\obj\Debug\App.c
 C:\Users\BBARRERA\Desktop\repo\GestionDeComercio\GestionComercio\obj\Debug\GestionComercio.exe
 C:\Users\BBARRERA\Desktop\repo\GestionDeComercio\GestionComercio\obj\Debug\GestionComercio.pdb
 C:\Users\BBARRERA\Desktop\repo\GestionDeComercio\GestionComercio\obj\Debug\GestionComercio.FrmPrincipal.resources
+C:\Users\usuario\Desktop\tp_progra3\GestionDeComercio\GestionComercio\obj\Debug\GestionComercio.FrmPrincipal.resources

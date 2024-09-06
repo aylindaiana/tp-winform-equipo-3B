@@ -150,6 +150,7 @@
             this.Controls.Add(this.btnAgregar);
             this.MinimumSize = new System.Drawing.Size(700, 430);
             this.Name = "FrmPrincipal";
+            this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

@@ -1,18 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\BBARRERA\\Desktop\\repo\\GestionDeComercio\\",
+  "WorkspaceRootPath": "C:\\Users\\usuario\\Desktop\\tp_progra3\\GestionDeComercio\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|c:\\users\\bbarrera\\desktop\\repo\\gestiondecomercio\\gestioncomercio\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{40015F15-FAD3-476B-85A7-CA316566FE6C}|Manager\\Manager.csproj|c:\\users\\usuario\\desktop\\tp_progra3\\gestiondecomercio\\manager\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40015F15-FAD3-476B-85A7-CA316566FE6C}|Manager\\Manager.csproj|solutionrelative:manager\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|C:\\Users\\usuario\\Desktop\\tp_progra3\\GestionDeComercio\\gestioncomercio\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|solutionrelative:gestioncomercio\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|c:\\users\\usuario\\desktop\\tp_progra3\\gestiondecomercio\\gestioncomercio\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|solutionrelative:gestioncomercio\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|C:\\Users\\BBARRERA\\Desktop\\repo\\GestionDeComercio\\gestioncomercio\\frmprincipal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|C:\\Users\\usuario\\Desktop\\tp_progra3\\GestionDeComercio\\gestioncomercio\\frmprincipal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|solutionrelative:gestioncomercio\\frmprincipal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|C:\\Users\\BBARRERA\\Desktop\\repo\\GestionDeComercio\\gestioncomercio\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|solutionrelative:gestioncomercio\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,36 +26,41 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AccesoDatos.cs",
+              "DocumentMoniker": "C:\\Users\\usuario\\Desktop\\tp_progra3\\GestionDeComercio\\Manager\\AccesoDatos.cs",
+              "RelativeDocumentMoniker": "Manager\\AccesoDatos.cs",
+              "ToolTip": "C:\\Users\\usuario\\Desktop\\tp_progra3\\GestionDeComercio\\Manager\\AccesoDatos.cs",
+              "RelativeToolTip": "Manager\\AccesoDatos.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-06T20:30:47.383Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "FrmPrincipal.cs",
-              "DocumentMoniker": "C:\\Users\\BBARRERA\\Desktop\\repo\\GestionDeComercio\\GestionComercio\\FrmPrincipal.cs",
+              "DocumentMoniker": "C:\\Users\\usuario\\Desktop\\tp_progra3\\GestionDeComercio\\GestionComercio\\FrmPrincipal.cs",
               "RelativeDocumentMoniker": "GestionComercio\\FrmPrincipal.cs",
-              "ToolTip": "C:\\Users\\BBARRERA\\Desktop\\repo\\GestionDeComercio\\GestionComercio\\FrmPrincipal.cs",
+              "ToolTip": "C:\\Users\\usuario\\Desktop\\tp_progra3\\GestionDeComercio\\GestionComercio\\FrmPrincipal.cs",
               "RelativeToolTip": "GestionComercio\\FrmPrincipal.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAUwBEAAAAJAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-06T03:54:43.505Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "FrmPrincipal.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\BBARRERA\\Desktop\\repo\\GestionDeComercio\\GestionComercio\\FrmPrincipal.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\usuario\\Desktop\\tp_progra3\\GestionDeComercio\\GestionComercio\\FrmPrincipal.Designer.cs",
               "RelativeDocumentMoniker": "GestionComercio\\FrmPrincipal.Designer.cs",
-              "ToolTip": "C:\\Users\\BBARRERA\\Desktop\\repo\\GestionDeComercio\\GestionComercio\\FrmPrincipal.Designer.cs",
+              "ToolTip": "C:\\Users\\usuario\\Desktop\\tp_progra3\\GestionDeComercio\\GestionComercio\\FrmPrincipal.Designer.cs",
               "RelativeToolTip": "GestionComercio\\FrmPrincipal.Designer.cs",
               "ViewState": "AQIAAAwAAAAAAAAAAAAiwH0AAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -60,11 +69,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "FrmPrincipal.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\BBARRERA\\Desktop\\repo\\GestionDeComercio\\GestionComercio\\FrmPrincipal.cs",
+              "DocumentMoniker": "C:\\Users\\usuario\\Desktop\\tp_progra3\\GestionDeComercio\\GestionComercio\\FrmPrincipal.cs",
               "RelativeDocumentMoniker": "GestionComercio\\FrmPrincipal.cs",
-              "ToolTip": "C:\\Users\\BBARRERA\\Desktop\\repo\\GestionDeComercio\\GestionComercio\\FrmPrincipal.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\usuario\\Desktop\\tp_progra3\\GestionDeComercio\\GestionComercio\\FrmPrincipal.cs [Dise\u00F1o]",
               "RelativeToolTip": "GestionComercio\\FrmPrincipal.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-06T03:03:10.972Z",
