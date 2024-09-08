@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dominio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,6 +22,14 @@ namespace GestionComercio
         {
             FrmAltaArticulo alta = new FrmAltaArticulo();
             alta.ShowDialog();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Articulo seleccion = new Articulo();
+
+            FrmAltaArticulo modificar = new FrmAltaArticulo(seleccion);
+            modificar.ShowDialog();
         }
     }
 }

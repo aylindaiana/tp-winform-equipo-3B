@@ -52,7 +52,7 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.Location = new System.Drawing.Point(52, 111);
+            this.lblNombre.Location = new System.Drawing.Point(12, 108);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(65, 16);
             this.lblNombre.TabIndex = 0;
@@ -62,7 +62,7 @@
             // 
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.Location = new System.Drawing.Point(52, 141);
+            this.lblDescripcion.Location = new System.Drawing.Point(12, 137);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(94, 16);
             this.lblDescripcion.TabIndex = 1;
@@ -72,7 +72,7 @@
             // 
             this.lblMarca.AutoSize = true;
             this.lblMarca.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMarca.Location = new System.Drawing.Point(53, 175);
+            this.lblMarca.Location = new System.Drawing.Point(12, 166);
             this.lblMarca.Name = "lblMarca";
             this.lblMarca.Size = new System.Drawing.Size(52, 16);
             this.lblMarca.TabIndex = 2;
@@ -82,7 +82,7 @@
             // 
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoria.Location = new System.Drawing.Point(52, 203);
+            this.lblCategoria.Location = new System.Drawing.Point(12, 197);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(77, 16);
             this.lblCategoria.TabIndex = 3;
@@ -92,7 +92,7 @@
             // 
             this.lblImagen.AutoSize = true;
             this.lblImagen.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblImagen.Location = new System.Drawing.Point(52, 236);
+            this.lblImagen.Location = new System.Drawing.Point(12, 231);
             this.lblImagen.Name = "lblImagen";
             this.lblImagen.Size = new System.Drawing.Size(60, 16);
             this.lblImagen.TabIndex = 4;
@@ -102,7 +102,7 @@
             // 
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecio.Location = new System.Drawing.Point(53, 270);
+            this.lblPrecio.Location = new System.Drawing.Point(12, 266);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(53, 16);
             this.lblPrecio.TabIndex = 5;
@@ -110,53 +110,54 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(187, 107);
+            this.txtNombre.Location = new System.Drawing.Point(123, 104);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(121, 20);
-            this.txtNombre.TabIndex = 6;
+            this.txtNombre.TabIndex = 1;
             // 
             // txtDescricion
             // 
-            this.txtDescricion.Location = new System.Drawing.Point(187, 137);
+            this.txtDescricion.Location = new System.Drawing.Point(123, 133);
             this.txtDescricion.Name = "txtDescricion";
             this.txtDescricion.Size = new System.Drawing.Size(121, 20);
-            this.txtDescricion.TabIndex = 7;
+            this.txtDescricion.TabIndex = 2;
             // 
             // cboMarca
             // 
             this.cboMarca.FormattingEnabled = true;
-            this.cboMarca.Location = new System.Drawing.Point(187, 170);
+            this.cboMarca.Location = new System.Drawing.Point(123, 161);
             this.cboMarca.Name = "cboMarca";
             this.cboMarca.Size = new System.Drawing.Size(121, 21);
-            this.cboMarca.TabIndex = 8;
+            this.cboMarca.TabIndex = 3;
             // 
             // cboCategoria
             // 
             this.cboCategoria.FormattingEnabled = true;
-            this.cboCategoria.Location = new System.Drawing.Point(187, 198);
+            this.cboCategoria.Location = new System.Drawing.Point(123, 196);
             this.cboCategoria.Name = "cboCategoria";
             this.cboCategoria.Size = new System.Drawing.Size(121, 21);
-            this.cboCategoria.TabIndex = 9;
+            this.cboCategoria.TabIndex = 4;
             // 
             // btnAceptar
             // 
             this.btnAceptar.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnAceptar.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.Location = new System.Drawing.Point(138, 312);
+            this.btnAceptar.Location = new System.Drawing.Point(281, 290);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(90, 35);
-            this.btnAceptar.TabIndex = 10;
+            this.btnAceptar.TabIndex = 6;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCerrar
             // 
             this.btnCerrar.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnCerrar.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.Location = new System.Drawing.Point(304, 312);
+            this.btnCerrar.Location = new System.Drawing.Point(413, 290);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(87, 35);
-            this.btnCerrar.TabIndex = 11;
+            this.btnCerrar.TabIndex = 7;
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
@@ -174,16 +175,16 @@
             // 
             // txtUrlImagen
             // 
-            this.txtUrlImagen.Location = new System.Drawing.Point(187, 232);
+            this.txtUrlImagen.Location = new System.Drawing.Point(123, 231);
             this.txtUrlImagen.Name = "txtUrlImagen";
             this.txtUrlImagen.Size = new System.Drawing.Size(121, 20);
-            this.txtUrlImagen.TabIndex = 13;
+            this.txtUrlImagen.TabIndex = 5;
             // 
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigo.Location = new System.Drawing.Point(52, 80);
+            this.lblCodigo.Location = new System.Drawing.Point(12, 79);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(60, 16);
             this.lblCodigo.TabIndex = 14;
@@ -191,16 +192,16 @@
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(187, 76);
+            this.txtCodigo.Location = new System.Drawing.Point(123, 75);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(121, 20);
-            this.txtCodigo.TabIndex = 15;
+            this.txtCodigo.TabIndex = 0;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(340, 87);
+            this.pictureBox1.Location = new System.Drawing.Point(281, 79);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(195, 164);
+            this.pictureBox1.Size = new System.Drawing.Size(228, 186);
             this.pictureBox1.TabIndex = 16;
             this.pictureBox1.TabStop = false;
             // 
@@ -209,7 +210,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(550, 369);
+            this.ClientSize = new System.Drawing.Size(520, 342);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.lblCodigo);
