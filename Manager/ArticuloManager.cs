@@ -145,8 +145,8 @@ namespace Manager
             List<Articulo> lista = new List<Articulo>();
             AccesoDatos datos = new AccesoDatos();
             try
-            {
-                string consulta = "SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, A.IdMarca, M.Descripcion AS MarcaDescripcion, A.IdCategoria, C.Descripcion AS CategoriaDescripcion, A.ImagenUrl, A.Precio from ARTICULOS A, MARCAS M, CATEGORIAS C Where A.IdMarca = M.Id and A.IdCategoria = C.Id and Precio > 0 AND ";
+            {                      //no indique que traiga la imagen para que podamos definir primero como vamos a hacer
+                string consulta = "SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, A.IdMarca, M.Descripcion AS MarcaDescripcion, A.IdCategoria, C.Descripcion AS CategoriaDescripcion, A.Precio from ARTICULOS A, MARCAS M, CATEGORIAS C Where A.IdMarca = M.Id and A.IdCategoria = C.Id and Precio > 0 AND ";
                 if (campo == "precio")
                 {
                     switch (criterio)
@@ -211,8 +211,6 @@ namespace Manager
                     aux.TipoCategoria.Id = (int)datos.Lector["IdCategoria"];
                     aux.TipoCategoria.Descripcion = (string)datos.Lector["CategoriaDescripcion"];
 
-                    if (!(datos.Lector["ImagenUrl"] is DBNull))
-                        aux.ImagenUrl = (string)datos.Lector["ImagenUrl"];
 
                     aux.Precio = (decimal)datos.Lector["Precio"];
 

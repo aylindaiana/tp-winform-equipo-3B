@@ -25,6 +25,9 @@ namespace GestionComercio
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
             cargarDgv();
+            ComboBoxCampo.Items.Add("precio");
+            ComboBoxCampo.Items.Add("nombre");
+            ComboBoxCampo.Items.Add("categoría");
         }
 
 
@@ -62,22 +65,23 @@ namespace GestionComercio
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (dgvArticulos.RowCount != 0)
+            ArticuloManager ArtiManager = new ArticuloManager();
+            Articulo ArtiSeleccionado = new Articulo();
+
+            try
             {
-                Articulo artSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
-                DialogResult dResult = MessageBox.Show("Esta seguro que desea eliminar el Articulo:  (" + artSeleccionado.Codigo + ") " + artSeleccionado.Nombre, "Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-
-                if (dResult == DialogResult.OK)
+                DialogResult respuesta = MessageBox.Show("¿De verdad querés eliminarlo?", "Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (respuesta == DialogResult.Yes)
                 {
-                    //baja en DB
-
-                    MessageBox.Show("Eliminacion exitosa");
+                    ArtiSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                    ArtiManager.eliminarLogico(ArtiSeleccionado.Id);
+                    cargarDgv();
                 }
             }
-            else 
-            { 
-                MessageBox.Show("Agrege articulos antes de realizar una Eliminacion...", "Error al Eliminar el articulo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }   
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
         }
 
         private void cargaImagen(string url) {
@@ -136,5 +140,97 @@ namespace GestionComercio
             cargaImagen(listaFiltrada[0].ImagenUrl);
 
         }
+
+        private void ComboBoxCampo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string opcion = ComboBoxCampo.SelectedItem.ToString(); //capturo la seleccion
+            if (opcion == "precio")
+            {
+                ComboBoxCriterio.Items.Clear();
+                ComboBoxCriterio.Items.Add("Mayor a");
+                ComboBoxCriterio.Items.Add("Menor a");
+                ComboBoxCriterio.Items.Add("Igual a");
+            }
+            else
+            {
+                ComboBoxCriterio.Items.Clear();
+                ComboBoxCriterio.Items.Add("Comienza con");
+                ComboBoxCriterio.Items.Add("Termina con");
+                ComboBoxCriterio.Items.Add("Contiene");
+            }
+        }
+
+        private bool validarFiltro()
+        {
+            if (ComboBoxCampo.SelectedIndex < 0) //pregunto si campo no tiene nada seleccionado
+            {
+                MessageBox.Show("Por favor, seleccione el campo para filtrar.");
+                return true;
+            }
+            if (ComboBoxCriterio.SelectedIndex < 0) //pregunto si criterio no tiene nada seleccionado
+            {
+                MessageBox.Show("Por favor, seleccione el criterio para filtrar.");
+                return true;
+            }
+            if (ComboBoxCampo.SelectedItem.ToString() == "precio")//pregunto si campo es precio
+            {
+                if (string.IsNullOrEmpty(textBoxFiltroAvanzado.Text))//si el filtro esta vacio o null
+                {
+                    MessageBox.Show("Debes cargar el filtro...");
+                    return true;
+                }
+                if (!(soloNumeros(textBoxFiltroAvanzado.Text))) //por q esta en op numumerico
+                {
+                    MessageBox.Show("Solo nros para filtrar por un campo numerico...");
+                    return true;
+                }
+            }
+            if (ComboBoxCampo.SelectedItem.ToString() == "nombre" || ComboBoxCampo.SelectedItem.ToString() == "categoría")
+            {
+                if (string.IsNullOrEmpty(textBoxFiltroAvanzado.Text))//si el filtro esta vacio o null
+                {
+                    MessageBox.Show("Debes cargar el filtro...");
+                    return true;
+                }
+                if ((soloNumeros(textBoxFiltroAvanzado.Text))) //por q esta en op text
+                {
+                    MessageBox.Show("Solo letras para filtrar por un campo de texto...");
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        private bool soloNumeros(string cadena)
+        {
+            foreach (char caracter in cadena)
+            {
+                if (!(char.IsNumber(caracter)))
+                    return false;
+            }
+            return true;
+        }
+
+        private void BotonFiltrar_Click(object sender, EventArgs e)
+        {
+            ArticuloManager ArtiManager = new ArticuloManager();
+            try
+            {
+                if (validarFiltro()) //si hay q validar corta la ejecucion
+                    return;
+
+                string campo = ComboBoxCampo.SelectedItem.ToString();
+                string criterio = ComboBoxCriterio.SelectedItem.ToString();
+                string filtro = textBoxFiltroAvanzado.Text;
+                dgvArticulos.DataSource = ArtiManager.filtrar(campo, criterio, filtro);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
     }
+    
 }
