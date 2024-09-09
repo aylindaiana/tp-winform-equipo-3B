@@ -40,7 +40,7 @@
             this.cboCategoria = new System.Windows.Forms.ComboBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCerrar = new System.Windows.Forms.Button();
-            this.lblTituloAgregar = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.txtUrlImagen = new System.Windows.Forms.TextBox();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
@@ -125,6 +125,7 @@
             // 
             // cboMarca
             // 
+            this.cboMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMarca.FormattingEnabled = true;
             this.cboMarca.Location = new System.Drawing.Point(123, 161);
             this.cboMarca.Name = "cboMarca";
@@ -133,6 +134,7 @@
             // 
             // cboCategoria
             // 
+            this.cboCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCategoria.FormattingEnabled = true;
             this.cboCategoria.Location = new System.Drawing.Point(123, 196);
             this.cboCategoria.Name = "cboCategoria";
@@ -165,16 +167,16 @@
             this.btnCerrar.UseVisualStyleBackColor = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // lblTituloAgregar
+            // lblTitulo
             // 
-            this.lblTituloAgregar.AutoSize = true;
-            this.lblTituloAgregar.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblTituloAgregar.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloAgregar.Location = new System.Drawing.Point(118, 20);
-            this.lblTituloAgregar.Name = "lblTituloAgregar";
-            this.lblTituloAgregar.Size = new System.Drawing.Size(282, 25);
-            this.lblTituloAgregar.TabIndex = 12;
-            this.lblTituloAgregar.Text = "Agrega tu nuevo Articulo";
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lblTitulo.Font = new System.Drawing.Font("Mongolian Baiti", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(118, 20);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(282, 25);
+            this.lblTitulo.TabIndex = 12;
+            this.lblTitulo.Text = "Agrega tu nuevo Articulo";
             // 
             // txtUrlImagen
             // 
@@ -226,7 +228,7 @@
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.txtUrlImagen);
-            this.Controls.Add(this.lblTituloAgregar);
+            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.cboCategoria);
@@ -241,7 +243,7 @@
             this.Controls.Add(this.lblNombre);
             this.Name = "FrmAltaArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmAltaArticulo";
+            this.Load += new System.EventHandler(this.FrmAltaArticulo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -262,7 +264,7 @@
         private System.Windows.Forms.ComboBox cboCategoria;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCerrar;
-        private System.Windows.Forms.Label lblTituloAgregar;
+        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.TextBox txtUrlImagen;
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.TextBox txtCodigo;

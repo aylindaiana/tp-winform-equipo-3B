@@ -16,7 +16,7 @@ namespace Manager
 
             try
             {
-                datos.SetearConsulta("SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, A.IdMarca, M.Descripcion AS MarcaDescripcion, A.IdCategoria, C.Descripcion AS CategoriaDescripcion, A.ImagenUrl, A.Precio from ARTICULOS A, MARCAS M, CATEGORIAS C Where A.IdMarca = M.Id and A.IdCategoria = C.Id and Precio > 0");
+                datos.SetearConsulta("SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, A.IdMarca, M.Descripcion AS MarcaDescripcion, A.IdCategoria, C.Descripcion AS CategoriaDescripcion, I.ImagenUrl, A.Precio from ARTICULOS A, MARCAS M, CATEGORIAS C, IMAGENES I Where A.IdMarca = M.Id and A.IdCategoria = C.Id and A.Id = I.IdArticulo and Precio > 0");
                 datos.EjecutarLectura();
 
                 while (datos.Lector.Read())
