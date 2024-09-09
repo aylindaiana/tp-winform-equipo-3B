@@ -31,12 +31,12 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtFitro = new System.Windows.Forms.TextBox();
             this.pnlTitulo = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.LinkLabel();
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
-            this.lblBusqueda = new System.Windows.Forms.Label();
             this.pbxArticulo = new System.Windows.Forms.PictureBox();
+            this.lblFiltro = new System.Windows.Forms.Label();
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).BeginInit();
@@ -75,14 +75,15 @@
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // textBox1
+            // txtFitro
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtFitro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(112, 80);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(935, 20);
-            this.textBox1.TabIndex = 5;
+            this.txtFitro.Location = new System.Drawing.Point(112, 80);
+            this.txtFitro.Name = "txtFitro";
+            this.txtFitro.Size = new System.Drawing.Size(743, 20);
+            this.txtFitro.TabIndex = 5;
+            this.txtFitro.TextChanged += new System.EventHandler(this.txtFitro_TextChanged);
             // 
             // pnlTitulo
             // 
@@ -113,21 +114,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvArticulos.Location = new System.Drawing.Point(112, 129);
+            this.dgvArticulos.MultiSelect = false;
             this.dgvArticulos.Name = "dgvArticulos";
+            this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvArticulos.Size = new System.Drawing.Size(743, 365);
             this.dgvArticulos.TabIndex = 9;
             this.dgvArticulos.SelectionChanged += new System.EventHandler(this.dgvArticulos_SelectionChanged);
-            // 
-            // lblBusqueda
-            // 
-            this.lblBusqueda.AutoSize = true;
-            this.lblBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBusqueda.Location = new System.Drawing.Point(29, 80);
-            this.lblBusqueda.Name = "lblBusqueda";
-            this.lblBusqueda.Size = new System.Drawing.Size(63, 20);
-            this.lblBusqueda.TabIndex = 8;
-            this.lblBusqueda.Text = "Buscar:";
             // 
             // pbxArticulo
             // 
@@ -139,17 +133,27 @@
             this.pbxArticulo.TabIndex = 10;
             this.pbxArticulo.TabStop = false;
             // 
+            // lblFiltro
+            // 
+            this.lblFiltro.AutoSize = true;
+            this.lblFiltro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFiltro.Location = new System.Drawing.Point(29, 80);
+            this.lblFiltro.Name = "lblFiltro";
+            this.lblFiltro.Size = new System.Drawing.Size(63, 20);
+            this.lblFiltro.TabIndex = 11;
+            this.lblFiltro.Text = "Buscar:";
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1085, 517);
+            this.Controls.Add(this.lblFiltro);
             this.Controls.Add(this.pbxArticulo);
-            this.Controls.Add(this.lblBusqueda);
             this.Controls.Add(this.dgvArticulos);
             this.Controls.Add(this.pnlTitulo);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtFitro);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
@@ -170,12 +174,12 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtFitro;
         private System.Windows.Forms.Panel pnlTitulo;
         private System.Windows.Forms.LinkLabel lblTitulo;
         private System.Windows.Forms.DataGridView dgvArticulos;
-        private System.Windows.Forms.Label lblBusqueda;
         private System.Windows.Forms.PictureBox pbxArticulo;
+        private System.Windows.Forms.Label lblFiltro;
     }
 }
 
