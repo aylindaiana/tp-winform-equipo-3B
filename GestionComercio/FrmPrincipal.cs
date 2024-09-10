@@ -16,6 +16,8 @@ namespace GestionComercio
     {
 
         List<Articulo> listaArticulos = new List<Articulo>();
+        List<Imagen> listaImagenes = new List<Imagen>();
+        
 
         public FrmPrincipal()
         {
@@ -25,16 +27,13 @@ namespace GestionComercio
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
             cargarDgv();
-            ComboBoxCampo.Items.Add("precio");
-            ComboBoxCampo.Items.Add("nombre");
-            ComboBoxCampo.Items.Add("categoría");
         }
-
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             FrmAltaArticulo alta = new FrmAltaArticulo();
             alta.ShowDialog();
+            cargarDgv(); 
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -46,6 +45,7 @@ namespace GestionComercio
                 seleccion = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
                 FrmAltaArticulo modificar = new FrmAltaArticulo(seleccion);
                 modificar.ShowDialog();
+                cargarDgv();       
             }
             else 
             { 
@@ -59,7 +59,7 @@ namespace GestionComercio
             if (dgvArticulos.RowCount != 0)
             {
                 Articulo artSeleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
-                cargaImagen(artSeleccionado.ImagenUrl);
+                cargaImagen(artSeleccionado.Id);
             }
         }
 
@@ -69,7 +69,9 @@ namespace GestionComercio
             Articulo ArtiSeleccionado = new Articulo();
 
             try
-            {
+            {   
+                //modificar
+
                 DialogResult respuesta = MessageBox.Show("¿De verdad querés eliminarlo?", "Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (respuesta == DialogResult.Yes)
                 {
@@ -84,44 +86,26 @@ namespace GestionComercio
             }
         }
 
-        private void cargaImagen(string url) {
-
+        private void BotonFiltrar_Click(object sender, EventArgs e)
+        {
+            ArticuloManager ArtiManager = new ArticuloManager();
             try
             {
-                pbxArticulo.Load(url);
+                if (validarFiltro()) //si hay q validar corta la ejecucion
+                {
+                    cargarDgv();
+                    return; 
+                }
+
+                string campo = ComboBoxCampo.SelectedItem.ToString();
+                string criterio = ComboBoxCriterio.SelectedItem.ToString();
+                string filtro = textBoxFiltroAvanzado.Text;
+                dgvArticulos.DataSource = ArtiManager.filtrar(campo, criterio, filtro);
+
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                pbxArticulo.Load("https://myemotos.cl/wp-content/uploads/2024/06/sin_imagen.jpg");
-            }
-
-        }
-
-        private void ocultarColumnas()
-        {
-            dgvArticulos.Columns["ImagenUrl"].Visible = false;
-            if (dgvArticulos.RowCount != 0)
-                cargaImagen(listaArticulos[0].ImagenUrl);
-        }
-
-        private void cargarDgv()
-        {
-            ArticuloManager articulos = new ArticuloManager();
-
-            try
-            {
-                listaArticulos = articulos.listar();
-            }
-            catch (Exception)
-            {
-
-                MessageBox.Show("Error al cargar datos...");
-            }
-            finally
-            {
-                dgvArticulos.DataSource = listaArticulos;
-                ocultarColumnas();
+                MessageBox.Show(ex.ToString());
             }
         }
 
@@ -129,16 +113,24 @@ namespace GestionComercio
         {
             List<Articulo> listaFiltrada;
 
+            string texto = txtFitro.Text.ToString().ToLower();
+
             if (txtFitro.Text.Length >= 3)
-                listaFiltrada = listaArticulos.FindAll(x => x.Nombre.ToLower().Contains(txtFitro.Text.ToString().ToLower()));
-            else 
+                listaFiltrada = listaArticulos.FindAll(
+                    x => x.Nombre.ToLower().Contains(texto) ||
+                    x.Codigo.ToLower().Contains(texto) ||
+                    x.TipoMarca.Descripcion.ToLower().Contains(texto)
+                    );
+            else
                 listaFiltrada = listaArticulos;
 
             dgvArticulos.DataSource = null;
-            dgvArticulos.DataSource = listaFiltrada;
-            ocultarColumnas();
-            cargaImagen(listaFiltrada[0].ImagenUrl);
-
+            
+            if (listaFiltrada.Count != 0)
+            {
+                dgvArticulos.DataSource = listaFiltrada;
+                cargaImagen(listaFiltrada[0].Id);
+            }
         }
 
         private void ComboBoxCampo_SelectedIndexChanged(object sender, EventArgs e)
@@ -157,6 +149,49 @@ namespace GestionComercio
                 ComboBoxCriterio.Items.Add("Comienza con");
                 ComboBoxCriterio.Items.Add("Termina con");
                 ComboBoxCriterio.Items.Add("Contiene");
+            }
+        }
+
+        private void cargaImagen(int IdArt) {
+
+            try
+            {
+                Imagen nuevaImagen = listaImagenes.Find(x => x.IdArticulo == IdArt);
+                if(nuevaImagen != null)
+                    pbxArticulo.Load(nuevaImagen.ImagenUrl);
+                else
+                    pbxArticulo.Load("https://myemotos.cl/wp-content/uploads/2024/06/sin_imagen.jpg");
+            }
+            catch (Exception)
+            {
+                pbxArticulo.Load("https://myemotos.cl/wp-content/uploads/2024/06/sin_imagen.jpg");
+
+            }
+
+        }
+
+        private void cargarDgv()
+        {
+            ArticuloManager articulos = new ArticuloManager();
+            ImagenManager imagenes = new ImagenManager();
+
+            try
+            {
+                listaArticulos = articulos.listar();
+                listaImagenes = imagenes.listar();
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Error al cargar datos...");
+            }
+            finally
+            {
+                dgvArticulos.DataSource = listaArticulos;
+                ComboBoxCampo.Items.Clear();
+                ComboBoxCampo.Items.Add("precio");
+                ComboBoxCampo.Items.Add("nombre");
+                ComboBoxCampo.Items.Add("categoría");
             }
         }
 
@@ -212,25 +247,7 @@ namespace GestionComercio
             return true;
         }
 
-        private void BotonFiltrar_Click(object sender, EventArgs e)
-        {
-            ArticuloManager ArtiManager = new ArticuloManager();
-            try
-            {
-                if (validarFiltro()) //si hay q validar corta la ejecucion
-                    return;
 
-                string campo = ComboBoxCampo.SelectedItem.ToString();
-                string criterio = ComboBoxCriterio.SelectedItem.ToString();
-                string filtro = textBoxFiltroAvanzado.Text;
-                dgvArticulos.DataSource = ArtiManager.filtrar(campo, criterio, filtro);
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
-        }
     }
     
 }

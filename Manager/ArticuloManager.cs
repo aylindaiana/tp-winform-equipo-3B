@@ -16,7 +16,7 @@ namespace Manager
 
             try
             {
-                datos.SetearConsulta("SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, A.IdMarca, M.Descripcion AS MarcaDescripcion, A.IdCategoria, C.Descripcion AS CategoriaDescripcion, I.ImagenUrl, A.Precio from ARTICULOS A, MARCAS M, CATEGORIAS C, IMAGENES I Where A.IdMarca = M.Id and A.IdCategoria = C.Id and A.Id = I.IdArticulo and Precio > 0");
+                datos.SetearConsulta("SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, A.IdMarca, M.Descripcion AS MarcaDescripcion, A.IdCategoria, C.Descripcion AS CategoriaDescripcion, A.Precio from ARTICULOS A, MARCAS M, CATEGORIAS C Where A.IdMarca = M.Id and A.IdCategoria = C.Id and Precio > 0");
                 datos.EjecutarLectura();
 
                 while (datos.Lector.Read())
@@ -34,9 +34,6 @@ namespace Manager
                     aux.TipoCategoria = new Categoria();
                     aux.TipoCategoria.Id = (int)datos.Lector["IdCategoria"];
                     aux.TipoCategoria.Descripcion = (string)datos.Lector["CategoriaDescripcion"];
-
-                    if (!(datos.Lector["ImagenUrl"] is DBNull))
-                        aux.ImagenUrl = (string)datos.Lector["ImagenUrl"];
 
                     aux.Precio = (decimal)datos.Lector["Precio"];
                     aux.Precio = Math.Round(aux.Precio, 2);
@@ -62,13 +59,12 @@ namespace Manager
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.SetearConsulta("INSERT INTO ARTICULOS(Codigo, Nombre, Descripcion, IdMarca, IdCategoria, ImagenUrl, Precio) VALUES (@Codigo, @Nombre, @Descripcion, @IdMarca, @IdCategoria, @ImagenUrl, @Precio)");
+                datos.SetearConsulta("INSERT INTO ARTICULOS(Codigo, Nombre, Descripcion, IdMarca, IdCategoria, Precio) VALUES (@Codigo, @Nombre, @Descripcion, @IdMarca, @IdCategoria, @Precio)");
                 datos.SetearParametro("@Codigo", nuevo.Codigo);
                 datos.SetearParametro("@Nombre", nuevo.Nombre);
                 datos.SetearParametro("@Descripcion", nuevo.Descripcion);
                 datos.SetearParametro("@IdMarca", nuevo.TipoMarca.Id);
                 datos.SetearParametro("@IdCategoria", nuevo.TipoCategoria.Id);
-                datos.SetearParametro("@ImagenUrl", nuevo.ImagenUrl);
                 datos.SetearParametro("@Precio", nuevo.Precio);
                 datos.ejecutarAccion();
             }
@@ -88,13 +84,12 @@ namespace Manager
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.SetearConsulta("update  ARTICULOS set Codigo = @Codigo, Nombre = @Nombre, Descripcion = @Descripcion, IdMarca = @IdMarca, IdCategoria = @IdCategoria, ImagenUrl = @ImagenUrl, Precio = @Precio  Where Id = @id");
+                datos.SetearConsulta("update  ARTICULOS set Codigo = @Codigo, Nombre = @Nombre, Descripcion = @Descripcion, IdCategoria = @IdCategoria, ImagenUrl = @ImagenUrl, Precio = @Precio  Where Id = @id");
                 datos.SetearParametro("@Codigo", arti.Codigo);
                 datos.SetearParametro("@Nombre", arti.Nombre);
                 datos.SetearParametro("@Descripcion", arti.Descripcion);
                 datos.SetearParametro("@IdMarca", arti.TipoMarca.Id);
                 datos.SetearParametro("@IdCategoria", arti.TipoCategoria.Id);
-                datos.SetearParametro("@ImagenUrl", arti.ImagenUrl);
                 datos.SetearParametro("@Precio", arti.Precio);
                 datos.SetearParametro("@id", arti.Id);
 

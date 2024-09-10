@@ -64,7 +64,7 @@ namespace GestionComercio
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-
+            
         }
 
     }
