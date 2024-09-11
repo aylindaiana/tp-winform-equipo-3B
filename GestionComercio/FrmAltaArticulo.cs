@@ -155,57 +155,57 @@ namespace GestionComercio
 
             if(!decimal.TryParse(txtPrecio.Text,out precio))
             {
-                lblPrecio.ForeColor = Color.OrangeRed;
+                lblValidacionPrecio.ForeColor = Color.Red;
                 MessageBox.Show("Precio Invalido, Ingrese uno correcto");
                 correcto = false;
             } else if (string.IsNullOrEmpty(txtPrecio.Text))
             {
-                lblPrecio.ForeColor = Color.Red;
+                lblValidacionPrecio.ForeColor = Color.Red;
                 MessageBox.Show("El campo PRECIO debe completarse");
                 correcto = false;
             } else
             {
-                lblPrecio.ForeColor= Color.Black;
+                lblValidacionPrecio.ForeColor = Color.DarkGray;
             }
 
             if (string.IsNullOrEmpty(txtCodigo.Text))
             {
-                lblCodigo.ForeColor = Color.OrangeRed;
+                lblValidacionCodigo.ForeColor = Color.Red;
                 MessageBox.Show("El campo CODIGO debe completarse");
                 correcto = false;
             } else
             {
-                lblCodigo.ForeColor= Color.Black;
+                lblValidacionCodigo.ForeColor= Color.DarkGray;
             }
 
             if(string.IsNullOrEmpty(txtNombre.Text))
             {
-                lblNombre.ForeColor = Color.OrangeRed;
+                lblValidacionNombre.ForeColor = Color.Red;
                 MessageBox.Show("El campo NOMBRE debe completarse");
                 correcto = false;
             } else if(soloNumeros(txtNombre.Text))
             {
-                lblNombre.ForeColor= Color.Red;
+                lblValidacionNombre.ForeColor= Color.Red;
                 MessageBox.Show("Ingrese un nombre correcto que NO lleve Numeros");
                 correcto = false;
             }else
             {
-                lblNombre.ForeColor = Color.Black;
+                lblValidacionNombre.ForeColor = Color.DarkGray;
             }
 
             if(string.IsNullOrEmpty(txtDescripcion.Text))
             {
-                lblDescripcion.ForeColor = Color.Red;
+                lblValidacionDescripcion.ForeColor = Color.Red;
                 MessageBox.Show("El campo DESCRIPCION debe completarse");
                 correcto = false;
             } else if(soloNumeros(txtDescripcion.Text))
             {
-                lblDescripcion.ForeColor = Color.OrangeRed;
+                lblValidacionDescripcion.ForeColor = Color.Red;
                 MessageBox.Show("Ingrese una descripcion correcta que NO lleve Numeros");
                 correcto = false;
             } else
             {
-                lblDescripcion.ForeColor= Color.Black;
+                lblValidacionDescripcion.ForeColor= Color.DarkGray;
             }
                 
             return correcto;

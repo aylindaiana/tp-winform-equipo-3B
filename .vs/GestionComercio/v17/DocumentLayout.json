@@ -3,32 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\aapan\\Downloads\\GestionDeComercio\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|C:\\Users\\aapan\\Downloads\\GestionDeComercio\\gestioncomercio\\frmaltaarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|c:\\users\\aapan\\downloads\\gestiondecomercio\\gestioncomercio\\frmaltaarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|solutionrelative:gestioncomercio\\frmaltaarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|C:\\Users\\aapan\\Downloads\\GestionDeComercio\\gestioncomercio\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|solutionrelative:gestioncomercio\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40015F15-FAD3-476B-85A7-CA316566FE6C}|Manager\\Manager.csproj|C:\\Users\\aapan\\Downloads\\GestionDeComercio\\manager\\articulomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40015F15-FAD3-476B-85A7-CA316566FE6C}|Manager\\Manager.csproj|solutionrelative:manager\\articulomanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|C:\\Users\\aapan\\Downloads\\GestionDeComercio\\gestioncomercio\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|solutionrelative:gestioncomercio\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|C:\\Users\\aapan\\Downloads\\GestionDeComercio\\gestioncomercio\\frmaltaarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|solutionrelative:gestioncomercio\\frmaltaarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{452E3E28-0A05-4265-BF16-C9DC3C84F3DC}|Dominio\\Dominio.csproj|C:\\Users\\aapan\\Downloads\\GestionDeComercio\\dominio\\articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{452E3E28-0A05-4265-BF16-C9DC3C84F3DC}|Dominio\\Dominio.csproj|solutionrelative:dominio\\articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{40015F15-FAD3-476B-85A7-CA316566FE6C}|Manager\\Manager.csproj|C:\\Users\\aapan\\Downloads\\GestionDeComercio\\manager\\categoriamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40015F15-FAD3-476B-85A7-CA316566FE6C}|Manager\\Manager.csproj|solutionrelative:manager\\categoriamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|C:\\Users\\aapan\\Downloads\\GestionDeComercio\\gestioncomercio\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|solutionrelative:gestioncomercio\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|C:\\Users\\aapan\\Downloads\\GestionDeComercio\\gestioncomercio\\frmaltaarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|solutionrelative:gestioncomercio\\frmaltaarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|C:\\Users\\aapan\\Downloads\\GestionDeComercio\\gestioncomercio\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|solutionrelative:gestioncomercio\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
@@ -55,7 +47,45 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FrmAltaArticulo.cs",
+              "DocumentMoniker": "C:\\Users\\aapan\\Downloads\\GestionDeComercio\\GestionComercio\\FrmAltaArticulo.cs",
+              "RelativeDocumentMoniker": "GestionComercio\\FrmAltaArticulo.cs",
+              "ToolTip": "C:\\Users\\aapan\\Downloads\\GestionDeComercio\\GestionComercio\\FrmAltaArticulo.cs",
+              "RelativeToolTip": "GestionComercio\\FrmAltaArticulo.cs",
+              "ViewState": "AQIAAJAAAAAAAAAAAAAQwJMAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T14:27:56.583Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Articulo.cs",
+              "DocumentMoniker": "C:\\Users\\aapan\\Downloads\\GestionDeComercio\\Dominio\\Articulo.cs",
+              "RelativeDocumentMoniker": "Dominio\\Articulo.cs",
+              "ToolTip": "C:\\Users\\aapan\\Downloads\\GestionDeComercio\\Dominio\\Articulo.cs",
+              "RelativeToolTip": "Dominio\\Articulo.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAxwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T15:30:53.328Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "FrmAltaArticulo.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\aapan\\Downloads\\GestionDeComercio\\GestionComercio\\FrmAltaArticulo.cs",
+              "RelativeDocumentMoniker": "GestionComercio\\FrmAltaArticulo.cs",
+              "ToolTip": "C:\\Users\\aapan\\Downloads\\GestionDeComercio\\GestionComercio\\FrmAltaArticulo.cs [Dise\u00F1o]",
+              "RelativeToolTip": "GestionComercio\\FrmAltaArticulo.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T14:27:53.108Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "FrmPrincipal.cs",
               "DocumentMoniker": "C:\\Users\\aapan\\Downloads\\GestionDeComercio\\GestionComercio\\FrmPrincipal.cs",
               "RelativeDocumentMoniker": "GestionComercio\\FrmPrincipal.cs",
@@ -65,67 +95,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-11T00:14:31.234Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CategoriaManager.cs",
-              "DocumentMoniker": "C:\\Users\\aapan\\Downloads\\GestionDeComercio\\Manager\\CategoriaManager.cs",
-              "RelativeDocumentMoniker": "Manager\\CategoriaManager.cs",
-              "ToolTip": "C:\\Users\\aapan\\Downloads\\GestionDeComercio\\Manager\\CategoriaManager.cs",
-              "RelativeToolTip": "Manager\\CategoriaManager.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAgwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-11T00:13:20.629Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ArticuloManager.cs",
-              "DocumentMoniker": "C:\\Users\\aapan\\Downloads\\GestionDeComercio\\Manager\\ArticuloManager.cs",
-              "RelativeDocumentMoniker": "Manager\\ArticuloManager.cs",
-              "ToolTip": "C:\\Users\\aapan\\Downloads\\GestionDeComercio\\Manager\\ArticuloManager.cs",
-              "RelativeToolTip": "Manager\\ArticuloManager.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAF8AAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T14:26:49.584Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FrmAltaArticulo.cs",
-              "DocumentMoniker": "C:\\Users\\aapan\\Downloads\\GestionDeComercio\\GestionComercio\\FrmAltaArticulo.cs",
-              "RelativeDocumentMoniker": "GestionComercio\\FrmAltaArticulo.cs",
-              "ToolTip": "C:\\Users\\aapan\\Downloads\\GestionDeComercio\\GestionComercio\\FrmAltaArticulo.cs",
-              "RelativeToolTip": "GestionComercio\\FrmAltaArticulo.cs",
-              "ViewState": "AQIAAIoAAAAAAAAAAAAcwJIAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T14:27:56.583Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Articulo.cs",
-              "DocumentMoniker": "C:\\Users\\aapan\\Downloads\\GestionDeComercio\\Dominio\\Articulo.cs",
-              "RelativeDocumentMoniker": "Dominio\\Articulo.cs",
-              "ToolTip": "C:\\Users\\aapan\\Downloads\\GestionDeComercio\\Dominio\\Articulo.cs",
-              "RelativeToolTip": "Dominio\\Articulo.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAA1wAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T15:30:53.328Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FrmAltaArticulo.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\aapan\\Downloads\\GestionDeComercio\\GestionComercio\\FrmAltaArticulo.cs",
-              "RelativeDocumentMoniker": "GestionComercio\\FrmAltaArticulo.cs",
-              "ToolTip": "C:\\Users\\aapan\\Downloads\\GestionDeComercio\\GestionComercio\\FrmAltaArticulo.cs [Dise\u00F1o]",
-              "RelativeToolTip": "GestionComercio\\FrmAltaArticulo.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-10T14:27:53.108Z",
-              "EditorCaption": " [Dise\u00F1o]"
             }
           ]
         }
