@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -41,8 +42,21 @@ namespace Manager
             {
                 datos.CerrarConeccion();
             }
-
         }
 
+        public void traerImagen()
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                //datos.SetearConsulta("");
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }

@@ -84,7 +84,7 @@ namespace Manager
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                datos.SetearConsulta("update  ARTICULOS set Codigo = @Codigo, Nombre = @Nombre, Descripcion = @Descripcion, IdCategoria = @IdCategoria, ImagenUrl = @ImagenUrl, Precio = @Precio  Where Id = @id");
+                datos.SetearConsulta("update  ARTICULOS set Codigo = @Codigo, Nombre = @Nombre, Descripcion = @Descripcion, IdCategoria = @IdCategoria, Precio = @Precio  Where Id = @id");
                 datos.SetearParametro("@Codigo", arti.Codigo);
                 datos.SetearParametro("@Nombre", arti.Nombre);
                 datos.SetearParametro("@Descripcion", arti.Descripcion);

@@ -14,10 +14,11 @@ namespace GestionComercio
 {
     public partial class FrmAltaArticulo : Form
     {
-        private Articulo articulo = null;
-        private List<Categoria> listaCategorias = new List<Categoria>();
-        private List<Marca> listaMarcas = new List<Marca>();
+        private Articulo articulo = null; //para saber si es agregar un articulo nuevo
+        private OpenFileDialog archivo = null;
 
+        Imagen img = new Imagen();
+        Articulo arti = new Articulo();
 
 
         public FrmAltaArticulo()
@@ -37,24 +38,44 @@ namespace GestionComercio
 
         private void FrmAltaArticulo_Load(object sender, EventArgs e)
         {
-            CategoriaManager categorias = new CategoriaManager();
             MarcaManager marcas = new MarcaManager();
+            CategoriaManager categorias = new CategoriaManager();
+            //ImagenManager imagen = new ImagenManager();
 
             try
             {
-                listaCategorias = categorias.Listar();
-                listaMarcas = marcas.Listar();
+                cboMarca.DataSource = marcas.Listar();
+                cboMarca.ValueMember = "Id";
+                cboMarca.DisplayMember = "Descripcion";
+                cboCategoria.DataSource = categorias.Listar();
+                cboCategoria.ValueMember = "Id";
+                cboCategoria.DisplayMember = "Descripcion";
+
+
+               
+
+                if (articulo != null)
+                {
+                    txtCodigo.Text = articulo.Codigo;
+                    txtNombre.Text = articulo.Nombre;
+                    txtDescripcion.Text = articulo.Descripcion;
+                    cboMarca.SelectedValue = articulo.TipoMarca.Id;
+                    cboCategoria.SelectedValue = articulo.TipoCategoria.Id;
+                    img.Id = articulo.Id;
+                    txtUrlImagen.Text = img.ImagenUrl;
+
+
+                    //CargarImagen(img.ImagenUrl);
+                    txtPrecio.Text = articulo.Precio.ToString();
+                }
+                    
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("No se pudieron obtener los datos");
+                MessageBox.Show(ex.ToString());
             }
-            finally
-            {
-                cboCategoria.DataSource = listaCategorias;
-                cboMarca.DataSource = listaMarcas;
-            }
+         
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -62,10 +83,66 @@ namespace GestionComercio
             Close();
         }
 
+
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            
+            ArticuloManager articuloManager = new ArticuloManager();
+
+            try
+            {
+                if(articulo ==null)
+                    articulo = new Articulo();
+
+                articulo.Codigo = txtCodigo.Text;
+                articulo.Nombre = txtNombre.Text;
+                articulo.Descripcion = txtDescripcion.Text;
+                articulo.TipoMarca = (Marca)cboMarca.SelectedItem;
+                articulo.TipoCategoria = (Categoria)cboCategoria.SelectedItem;
+                decimal precio;
+                if (decimal.TryParse(txtPrecio.Text, out precio))
+                {
+                    articulo.Precio = precio;
+                }
+
+
+                if (articulo.Id != 0)
+                {
+                    articuloManager.modificar(articulo);
+                    MessageBox.Show("Modificado Exitosamente!");
+                }else
+                {
+                    articuloManager.Agregar(articulo);
+                    MessageBox.Show("Agregado Exitosamente!");
+                }
+                
+
+                Close();                
+
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
         }
 
+
+        public void CargarImagen(string imagen)
+        {
+            try
+            {
+                pbxAgregado.Load(imagen);
+            }
+            catch (Exception ex)
+            {
+
+                pbxAgregado.Load("https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png");
+            }
+        }
+
+        private void txtUrlImagen_TextChanged(object sender, EventArgs e)
+        {
+            CargarImagen(txtUrlImagen.Text);
+        }
     }
 }
