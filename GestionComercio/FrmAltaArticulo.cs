@@ -40,7 +40,7 @@ namespace GestionComercio
         {
             MarcaManager marcas = new MarcaManager();
             CategoriaManager categorias = new CategoriaManager();
-            //ImagenManager imagen = new ImagenManager();
+            ImagenManager imagenes = new ImagenManager();
 
             try
             {
@@ -61,12 +61,12 @@ namespace GestionComercio
                     txtDescripcion.Text = articulo.Descripcion;
                     cboMarca.SelectedValue = articulo.TipoMarca.Id;
                     cboCategoria.SelectedValue = articulo.TipoCategoria.Id;
-                    img.Id = articulo.Id;
-                    txtUrlImagen.Text = img.ImagenUrl;
-
-
-                    //CargarImagen(img.ImagenUrl);
                     txtPrecio.Text = articulo.Precio.ToString();
+                    
+                    Imagen nuevaImangen = imagenes.BuscarImagen(articulo.Id);
+                    txtUrlImagen.Text = nuevaImangen.ImagenUrl;
+                    CargarImagen(nuevaImangen.ImagenUrl);
+                    
                 }
                     
 
@@ -102,6 +102,7 @@ namespace GestionComercio
                 articulo.TipoMarca = (Marca)cboMarca.SelectedItem;
                 articulo.TipoCategoria = (Categoria)cboCategoria.SelectedItem;
                 decimal precio;
+
                 if (decimal.TryParse(txtPrecio.Text, out precio))
                 {
                     articulo.Precio = precio;

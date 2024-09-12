@@ -44,18 +44,36 @@ namespace Manager
             }
         }
 
-        public void traerImagen()
+        public Imagen BuscarImagen(int IdArt)
         {
+            Imagen imagenBuscada = new Imagen();
             AccesoDatos datos = new AccesoDatos();
+
             try
             {
-                //datos.SetearConsulta("");
+                datos.SetearConsulta("SELECT Id, IdArticulo, ImagenUrl FROM IMAGENES WHERE IdArticulo = @IdArt");
+                datos.SetearParametro("@IdArt", IdArt);
+                datos.EjecutarLectura();
 
+                datos.Lector.Read();
+                
+                imagenBuscada.Id = (int)datos.Lector["Id"];
+                imagenBuscada.IdArticulo = (int)datos.Lector["IdArticulo"];
+
+                if (!(datos.Lector["ImagenUrl"] is DBNull))
+                    imagenBuscada.ImagenUrl = (string)datos.Lector["ImagenUrl"];
+                
+
+                return imagenBuscada;
             }
             catch (Exception ex)
             {
 
                 throw ex;
+            }
+            finally
+            {
+                datos.CerrarConeccion();
             }
         }
     }

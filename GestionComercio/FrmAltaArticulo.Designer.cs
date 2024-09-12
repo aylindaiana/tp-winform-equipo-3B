@@ -212,6 +212,7 @@
             this.pbxAgregado.Location = new System.Drawing.Point(281, 79);
             this.pbxAgregado.Name = "pbxAgregado";
             this.pbxAgregado.Size = new System.Drawing.Size(228, 186);
+            this.pbxAgregado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxAgregado.TabIndex = 16;
             this.pbxAgregado.TabStop = false;
             // 
@@ -322,11 +323,11 @@
         private System.Windows.Forms.TextBox txtUrlImagen;
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.TextBox txtCodigo;
-        private System.Windows.Forms.PictureBox pbxAgregado;
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Label lblValidacionCodigo;
         private System.Windows.Forms.Label lblValidacionNombre;
         private System.Windows.Forms.Label lblValidacionDescripcion;
         private System.Windows.Forms.Label lblValidacionPrecio;
+        public System.Windows.Forms.PictureBox pbxAgregado;
     }
 }
