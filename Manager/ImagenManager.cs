@@ -62,13 +62,58 @@ namespace Manager
 
                 if (!(datos.Lector["ImagenUrl"] is DBNull))
                     imagenBuscada.ImagenUrl = (string)datos.Lector["ImagenUrl"];
-                
+
+                datos.Lector.Close();
 
                 return imagenBuscada;
             }
             catch (Exception ex)
             {
 
+                throw ex;
+            }
+            finally
+            {
+                datos.CerrarConeccion();
+            }
+        }
+
+        public void Agregar(Imagen nuevo)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.SetearConsulta("INSERT INTO IMAGENES(idArticulo, ImagenUrl) VALUES (@idArticulo, @ImagenUrl)");
+                datos.SetearParametro("@idArticulo", nuevo.IdArticulo);
+                datos.SetearParametro("@ImagenUrl", nuevo.ImagenUrl);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.CerrarConeccion();
+            }
+        }
+
+        public void modificar(Imagen ImgModificada)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.SetearConsulta("update IMAGENES set idArticulo = @idArticulo, ImagenUrl = @ImagenUrl Where Id = @id");
+                datos.SetearParametro("@idArticulo", ImgModificada.IdArticulo);
+                datos.SetearParametro("@ImagenUrl", ImgModificada.ImagenUrl);
+                datos.SetearParametro("@id", ImgModificada.Id);
+
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
                 throw ex;
             }
             finally

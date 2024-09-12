@@ -15,11 +15,7 @@ namespace GestionComercio
     public partial class FrmAltaArticulo : Form
     {
         private Articulo articulo = null; //para saber si es agregar un articulo nuevo
-        private OpenFileDialog archivo = null;
-
-        Imagen img = new Imagen();
-        Articulo arti = new Articulo();
-
+        private Imagen nuevaImagen = new Imagen();
 
         public FrmAltaArticulo()
         {
@@ -40,7 +36,6 @@ namespace GestionComercio
         {
             MarcaManager marcas = new MarcaManager();
             CategoriaManager categorias = new CategoriaManager();
-            ImagenManager imagenes = new ImagenManager();
 
             try
             {
@@ -52,23 +47,8 @@ namespace GestionComercio
                 cboCategoria.DisplayMember = "Descripcion";
 
 
-               
-
                 if (articulo != null)
-                {
-                    txtCodigo.Text = articulo.Codigo;
-                    txtNombre.Text = articulo.Nombre;
-                    txtDescripcion.Text = articulo.Descripcion;
-                    cboMarca.SelectedValue = articulo.TipoMarca.Id;
-                    cboCategoria.SelectedValue = articulo.TipoCategoria.Id;
-                    txtPrecio.Text = articulo.Precio.ToString();
-                    
-                    Imagen nuevaImangen = imagenes.BuscarImagen(articulo.Id);
-                    txtUrlImagen.Text = nuevaImangen.ImagenUrl;
-                    CargarImagen(nuevaImangen.ImagenUrl);
-                    
-                }
-                    
+                    cargarDatosArticulo();
 
             }
             catch (Exception ex)
@@ -88,35 +68,22 @@ namespace GestionComercio
         {
             if (validarFiltro() != true)
                 return;
+            
 
-            ArticuloManager articuloManager = new ArticuloManager();
+            if (articulo == null)
+                articulo = new Articulo();
 
             try
             {
-                if(articulo ==null)
-                    articulo = new Articulo();
-
-                articulo.Codigo = txtCodigo.Text;
-                articulo.Nombre = txtNombre.Text;
-                articulo.Descripcion = txtDescripcion.Text;
-                articulo.TipoMarca = (Marca)cboMarca.SelectedItem;
-                articulo.TipoCategoria = (Categoria)cboCategoria.SelectedItem;
-                decimal precio;
-
-                if (decimal.TryParse(txtPrecio.Text, out precio))
-                {
-                    articulo.Precio = precio;
-                }
+                obtenerDatosCargados();
 
 
                 if (articulo.Id != 0)
                 {
-                    articuloManager.modificar(articulo);
-                    MessageBox.Show("Modificado Exitosamente!");
+                    modificarArt();
                 }else
                 {
-                    articuloManager.Agregar(articulo);
-                    MessageBox.Show("Agregado Exitosamente!");
+                    crearNuevoArt();
                 }
                 
 
@@ -137,7 +104,7 @@ namespace GestionComercio
             {
                 pbxAgregado.Load(imagen);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
                 pbxAgregado.Load("https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png");
@@ -219,6 +186,83 @@ namespace GestionComercio
                     return false;
             }
             return true;
+        }
+
+        private void obtenerDatosCargados() 
+        {
+            decimal precio;
+
+            try
+            {
+                articulo.Codigo = txtCodigo.Text;
+                articulo.Nombre = txtNombre.Text;
+                articulo.Descripcion = txtDescripcion.Text;
+                articulo.TipoMarca = (Marca)cboMarca.SelectedItem;
+                articulo.TipoCategoria = (Categoria)cboCategoria.SelectedItem;
+
+                nuevaImagen.ImagenUrl = txtUrlImagen.Text;
+
+                if (decimal.TryParse(txtPrecio.Text, out precio))
+                {
+                    articulo.Precio = precio;
+                }
+                
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void cargarDatosArticulo() 
+        {
+            ImagenManager imagenes = new ImagenManager();
+
+            try
+            {
+                txtCodigo.Text = articulo.Codigo;
+                txtNombre.Text = articulo.Nombre;
+                txtDescripcion.Text = articulo.Descripcion;
+                cboMarca.SelectedValue = articulo.TipoMarca.Id;
+                cboCategoria.SelectedValue = articulo.TipoCategoria.Id;
+                txtPrecio.Text = articulo.Precio.ToString();
+
+                nuevaImagen = imagenes.BuscarImagen(articulo.Id);
+                txtUrlImagen.Text = nuevaImagen.ImagenUrl;
+                CargarImagen(nuevaImagen.ImagenUrl);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        private void modificarArt() 
+        {
+            ArticuloManager articuloManager = new ArticuloManager();
+            ImagenManager imagenManager = new ImagenManager();
+
+            articuloManager.modificar(articulo);
+            nuevaImagen.IdArticulo = articulo.Id;
+            imagenManager.modificar(nuevaImagen);
+
+            MessageBox.Show("Modificado Exitosamente!");
+        }
+
+        private void crearNuevoArt()
+        {
+            ArticuloManager articuloManager = new ArticuloManager();
+            ImagenManager imagenManager = new ImagenManager();
+
+            articuloManager.Agregar(articulo);
+            //asginar el id del nuevo articulo a la imagen
+
+            //nuevaImagen.IdArticulo = articuloManager.UltimoId();
+            //imagenManager.Agregar(nuevaImagen);
+
+            MessageBox.Show("Agregado Exitosamente!");
         }
     }
 }

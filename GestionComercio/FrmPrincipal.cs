@@ -162,9 +162,10 @@ namespace GestionComercio
                 else
                     pbxArticulo.Load("https://myemotos.cl/wp-content/uploads/2024/06/sin_imagen.jpg");
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 pbxArticulo.Load("https://myemotos.cl/wp-content/uploads/2024/06/sin_imagen.jpg");
+                MessageBox.Show(ex.ToString());
 
             }
 
