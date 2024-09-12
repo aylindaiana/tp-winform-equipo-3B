@@ -47,3 +47,4 @@ C:\Users\aapan\Downloads\GestionDeComercio\GestionComercio\obj\Debug\GestionCome
 C:\Users\usuario\Desktop\tp_progra3\GestionDeComercio\GestionComercio\obj\Debug\GestionComercio.FrmAltaArticulo.resources
 C:\Users\BBARRERA\Desktop\repo\GestionDeComercio\GestionComercio\obj\Debug\GestionComercio.FrmAltaArticulo.resources
 C:\Users\BBARRERA\Desktop\repo\GestionDeComercio\GestionComercio\obj\Debug\GestionComercio.FrmAddMarcaYCategoria.resources
+C:\Users\aapan\Downloads\GestionDeComercio\GestionComercio\obj\Debug\GestionComercio.FrmAddMarcaYCategoria.resources
