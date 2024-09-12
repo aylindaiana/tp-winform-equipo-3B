@@ -295,9 +295,13 @@
             this.Controls.Add(this.lblMarca);
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.lblNombre);
-            this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(536, 381);
+            this.MinimumSize = new System.Drawing.Size(536, 381);
             this.Name = "FrmAltaArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Articulo";
             this.Load += new System.EventHandler(this.FrmAltaArticulo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxAgregado)).EndInit();
             this.ResumeLayout(false);
