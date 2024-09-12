@@ -78,15 +78,14 @@ namespace Manager
             }
         }
 
-        public void Agregar(Imagen nuevo)
+        public void Agregar(string url)
         {
             AccesoDatos datos = new AccesoDatos();
 
             try
             {
-                datos.SetearConsulta("INSERT INTO IMAGENES(idArticulo, ImagenUrl) VALUES (@idArticulo, @ImagenUrl)");
-                datos.SetearParametro("@idArticulo", nuevo.IdArticulo);
-                datos.SetearParametro("@ImagenUrl", nuevo.ImagenUrl);
+                datos.SetearConsulta("INSERT INTO IMAGENES (idArticulo, ImagenUrl) VALUES ( (SELECT TOP 1 id FROM ARTICULOS ORDER BY id DESC), @ImagenUrl)");
+                datos.SetearParametro("@ImagenUrl", url);
                 datos.ejecutarAccion();
             }
             catch (Exception ex)

@@ -257,10 +257,7 @@ namespace GestionComercio
             ImagenManager imagenManager = new ImagenManager();
 
             articuloManager.Agregar(articulo);
-            //asginar el id del nuevo articulo a la imagen
-
-            //nuevaImagen.IdArticulo = articuloManager.UltimoId();
-            //imagenManager.Agregar(nuevaImagen);
+            imagenManager.Agregar(nuevaImagen.ImagenUrl);
 
             MessageBox.Show("Agregado Exitosamente!");
         }

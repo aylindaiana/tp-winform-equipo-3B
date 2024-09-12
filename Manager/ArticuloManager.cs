@@ -220,35 +220,6 @@ namespace Manager
             }
         }
 
-        public int UltimoId()
-        {
-            AccesoDatos datos = new AccesoDatos();
-            int Id;
-
-            try
-            {
-                datos.SetearConsulta("SELECT IDENT_CURRENT('IMAGENES') AS UltimoID");
-                datos.EjecutarLectura();
-                datos.Lector.Read();
-                
-                //revisar metodo
-                //Id = (int)datos.Comando.ExecuteScalar();
-
-                datos.Lector.Close();
-
-                return 1;
-
-            }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            finally
-            {
-                datos.CerrarConeccion();
-            }
-        }
-
     }
 }
 

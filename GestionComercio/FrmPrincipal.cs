@@ -248,7 +248,18 @@ namespace GestionComercio
             return true;
         }
 
+        private void tsmAgregarMarca_Click(object sender, EventArgs e)
+        {
+            FrmAddMarcaYCategoria frmMarcaCategoria = new FrmAddMarcaYCategoria();
 
+
+            
+        }
+
+        private void tsmAgregarCategoria_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }

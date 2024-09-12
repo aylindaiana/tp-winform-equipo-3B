@@ -46,8 +46,8 @@
             this.labelCampo = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.msArchivo = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarMarcaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.agregarCategoriaDeArticuloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmAgregarMarca = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmAgregarCategoria = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
@@ -242,23 +242,25 @@
             // msArchivo
             // 
             this.msArchivo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.agregarMarcaToolStripMenuItem,
-            this.agregarCategoriaDeArticuloToolStripMenuItem});
+            this.tsmAgregarMarca,
+            this.tsmAgregarCategoria});
             this.msArchivo.Name = "msArchivo";
             this.msArchivo.Size = new System.Drawing.Size(60, 20);
             this.msArchivo.Text = "Archivo";
             // 
-            // agregarMarcaToolStripMenuItem
+            // tsmAgregarMarca
             // 
-            this.agregarMarcaToolStripMenuItem.Name = "agregarMarcaToolStripMenuItem";
-            this.agregarMarcaToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
-            this.agregarMarcaToolStripMenuItem.Text = "Agregar marca de articulo";
+            this.tsmAgregarMarca.Name = "tsmAgregarMarca";
+            this.tsmAgregarMarca.Size = new System.Drawing.Size(227, 22);
+            this.tsmAgregarMarca.Text = "Agregar marca de articulo";
+            this.tsmAgregarMarca.Click += new System.EventHandler(this.tsmAgregarMarca_Click);
             // 
-            // agregarCategoriaDeArticuloToolStripMenuItem
+            // tsmAgregarCategoria
             // 
-            this.agregarCategoriaDeArticuloToolStripMenuItem.Name = "agregarCategoriaDeArticuloToolStripMenuItem";
-            this.agregarCategoriaDeArticuloToolStripMenuItem.Size = new System.Drawing.Size(227, 22);
-            this.agregarCategoriaDeArticuloToolStripMenuItem.Text = "Agregar categoria de articulo";
+            this.tsmAgregarCategoria.Name = "tsmAgregarCategoria";
+            this.tsmAgregarCategoria.Size = new System.Drawing.Size(227, 22);
+            this.tsmAgregarCategoria.Text = "Agregar categoria de articulo";
+            this.tsmAgregarCategoria.Click += new System.EventHandler(this.tsmAgregarCategoria_Click);
             // 
             // aboutToolStripMenuItem
             // 
@@ -323,8 +325,8 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem msArchivo;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem agregarMarcaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem agregarCategoriaDeArticuloToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmAgregarMarca;
+        private System.Windows.Forms.ToolStripMenuItem tsmAgregarCategoria;
     }
 }
 

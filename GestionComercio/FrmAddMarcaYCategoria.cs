@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dominio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,7 +12,9 @@ using System.Windows.Forms;
 namespace GestionComercio
 {
     public partial class FrmAddMarcaYCategoria : Form
-    {
+    {   
+        //public bool m
+
         public FrmAddMarcaYCategoria()
         {
             InitializeComponent();
