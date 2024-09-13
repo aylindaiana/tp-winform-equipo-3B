@@ -209,6 +209,7 @@
             this.flecha_der.TabIndex = 47;
             this.flecha_der.Text = "--->";
             this.flecha_der.UseVisualStyleBackColor = true;
+            this.flecha_der.Click += new System.EventHandler(this.flecha_der_Click);
             // 
             // flecha_izq
             // 
@@ -219,6 +220,7 @@
             this.flecha_izq.TabIndex = 46;
             this.flecha_izq.Text = "<---";
             this.flecha_izq.UseVisualStyleBackColor = true;
+            this.flecha_izq.Click += new System.EventHandler(this.flecha_izq_Click);
             // 
             // labelCodigo
             // 
