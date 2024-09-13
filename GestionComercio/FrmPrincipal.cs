@@ -51,8 +51,25 @@ namespace GestionComercio
             { 
                 MessageBox.Show("Agrege articulos antes de realizar una modificacion...", "Error al modificar el articulo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-
         }
+
+        private void BtnVerDetalle_Click(object sender, EventArgs e)
+        {
+            Articulo seleccion = new Articulo();
+
+            if (dgvArticulos.RowCount != 0) //esto lo deje asi para que si o si tenga que haber un articulo seleccionado, por las dudas
+            {
+                seleccion = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+                FrmDetalle detalle = new FrmDetalle(seleccion);
+                detalle.ShowDialog();
+                cargarDgv();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un articulo antes de ver los detalles...", "Error al ver el detalle", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
 
         private void dgvArticulos_SelectionChanged(object sender, EventArgs e)
         {
@@ -262,6 +279,8 @@ namespace GestionComercio
             frmMarcaCategoria.TablaDestino = "Categorias";
             frmMarcaCategoria.ShowDialog();
         }
+
+
     }
     
 }

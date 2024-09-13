@@ -48,8 +48,7 @@
             this.msArchivo = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmAgregarMarca = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmAgregarCategoria = new System.Windows.Forms.ToolStripMenuItem();
-            this.flecha_izq = new System.Windows.Forms.Button();
-            this.flecha_der = new System.Windows.Forms.Button();
+            this.BtnVerDetalle = new System.Windows.Forms.Button();
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).BeginInit();
@@ -267,25 +266,16 @@
             this.tsmAgregarCategoria.Text = "Agregar categoria de articulo";
             this.tsmAgregarCategoria.Click += new System.EventHandler(this.tsmAgregarCategoria_Click);
             // 
-            // flecha_izq
+            // BtnVerDetalle
             // 
-            this.flecha_izq.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.flecha_izq.Location = new System.Drawing.Point(907, 344);
-            this.flecha_izq.Name = "flecha_izq";
-            this.flecha_izq.Size = new System.Drawing.Size(39, 33);
-            this.flecha_izq.TabIndex = 37;
-            this.flecha_izq.Text = "<---";
-            this.flecha_izq.UseVisualStyleBackColor = true;
-            // 
-            // flecha_der
-            // 
-            this.flecha_der.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.flecha_der.Location = new System.Drawing.Point(978, 344);
-            this.flecha_der.Name = "flecha_der";
-            this.flecha_der.Size = new System.Drawing.Size(39, 33);
-            this.flecha_der.TabIndex = 39;
-            this.flecha_der.Text = "--->";
-            this.flecha_der.UseVisualStyleBackColor = true;
+            this.BtnVerDetalle.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.BtnVerDetalle.Location = new System.Drawing.Point(935, 344);
+            this.BtnVerDetalle.Name = "BtnVerDetalle";
+            this.BtnVerDetalle.Size = new System.Drawing.Size(80, 27);
+            this.BtnVerDetalle.TabIndex = 37;
+            this.BtnVerDetalle.Text = "ver detale";
+            this.BtnVerDetalle.UseVisualStyleBackColor = true;
+            this.BtnVerDetalle.Click += new System.EventHandler(this.BtnVerDetalle_Click);
             // 
             // FrmPrincipal
             // 
@@ -293,8 +283,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1085, 581);
-            this.Controls.Add(this.flecha_der);
-            this.Controls.Add(this.flecha_izq);
+            this.Controls.Add(this.BtnVerDetalle);
             this.Controls.Add(this.BotonFiltrar);
             this.Controls.Add(this.textBoxFiltroAvanzado);
             this.Controls.Add(this.labelFiltro);
@@ -348,8 +337,7 @@
         private System.Windows.Forms.ToolStripMenuItem msArchivo;
         private System.Windows.Forms.ToolStripMenuItem tsmAgregarMarca;
         private System.Windows.Forms.ToolStripMenuItem tsmAgregarCategoria;
-        private System.Windows.Forms.Button flecha_izq;
-        private System.Windows.Forms.Button flecha_der;
+        private System.Windows.Forms.Button BtnVerDetalle;
     }
 }
 
