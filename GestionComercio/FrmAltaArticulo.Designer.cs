@@ -29,13 +29,11 @@
         private void InitializeComponent()
         {
             this.lblNombre = new System.Windows.Forms.Label();
-            this.lblDescripcion = new System.Windows.Forms.Label();
             this.lblMarca = new System.Windows.Forms.Label();
             this.lblCategoria = new System.Windows.Forms.Label();
             this.lblImagen = new System.Windows.Forms.Label();
             this.lblPrecio = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.cboMarca = new System.Windows.Forms.ComboBox();
             this.cboCategoria = new System.Windows.Forms.ComboBox();
             this.btnAceptar = new System.Windows.Forms.Button();
@@ -46,10 +44,13 @@
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.pbxAgregado = new System.Windows.Forms.PictureBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.lblDescripcion = new System.Windows.Forms.Label();
+            this.txtDescripcion = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblValidacionPrecio = new System.Windows.Forms.Label();
             this.lblValidacionCodigo = new System.Windows.Forms.Label();
             this.lblValidacionNombre = new System.Windows.Forms.Label();
             this.lblValidacionDescripcion = new System.Windows.Forms.Label();
-            this.lblValidacionPrecio = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbxAgregado)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,21 +64,11 @@
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre";
             // 
-            // lblDescripcion
-            // 
-            this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.Location = new System.Drawing.Point(13, 149);
-            this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(94, 16);
-            this.lblDescripcion.TabIndex = 1;
-            this.lblDescripcion.Text = "Descripcion";
-            // 
             // lblMarca
             // 
             this.lblMarca.AutoSize = true;
             this.lblMarca.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMarca.Location = new System.Drawing.Point(13, 187);
+            this.lblMarca.Location = new System.Drawing.Point(13, 162);
             this.lblMarca.Name = "lblMarca";
             this.lblMarca.Size = new System.Drawing.Size(52, 16);
             this.lblMarca.TabIndex = 2;
@@ -87,7 +78,7 @@
             // 
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoria.Location = new System.Drawing.Point(12, 219);
+            this.lblCategoria.Location = new System.Drawing.Point(12, 194);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(77, 16);
             this.lblCategoria.TabIndex = 3;
@@ -97,17 +88,17 @@
             // 
             this.lblImagen.AutoSize = true;
             this.lblImagen.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblImagen.Location = new System.Drawing.Point(12, 255);
+            this.lblImagen.Location = new System.Drawing.Point(12, 249);
             this.lblImagen.Name = "lblImagen";
-            this.lblImagen.Size = new System.Drawing.Size(60, 16);
+            this.lblImagen.Size = new System.Drawing.Size(75, 16);
             this.lblImagen.TabIndex = 4;
-            this.lblImagen.Text = "Imagen";
+            this.lblImagen.Text = "Imagenes";
             // 
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrecio.Location = new System.Drawing.Point(12, 290);
+            this.lblPrecio.Location = new System.Drawing.Point(12, 220);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(53, 16);
             this.lblPrecio.TabIndex = 5;
@@ -115,23 +106,16 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(123, 108);
+            this.txtNombre.Location = new System.Drawing.Point(123, 104);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(121, 20);
             this.txtNombre.TabIndex = 1;
-            // 
-            // txtDescripcion
-            // 
-            this.txtDescripcion.Location = new System.Drawing.Point(123, 148);
-            this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(121, 20);
-            this.txtDescripcion.TabIndex = 2;
             // 
             // cboMarca
             // 
             this.cboMarca.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMarca.FormattingEnabled = true;
-            this.cboMarca.Location = new System.Drawing.Point(123, 187);
+            this.cboMarca.Location = new System.Drawing.Point(123, 162);
             this.cboMarca.Name = "cboMarca";
             this.cboMarca.Size = new System.Drawing.Size(121, 21);
             this.cboMarca.TabIndex = 3;
@@ -140,7 +124,7 @@
             // 
             this.cboCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCategoria.FormattingEnabled = true;
-            this.cboCategoria.Location = new System.Drawing.Point(123, 214);
+            this.cboCategoria.Location = new System.Drawing.Point(123, 193);
             this.cboCategoria.Name = "cboCategoria";
             this.cboCategoria.Size = new System.Drawing.Size(121, 21);
             this.cboCategoria.TabIndex = 4;
@@ -184,7 +168,7 @@
             // 
             // txtUrlImagen
             // 
-            this.txtUrlImagen.Location = new System.Drawing.Point(123, 255);
+            this.txtUrlImagen.Location = new System.Drawing.Point(15, 268);
             this.txtUrlImagen.Name = "txtUrlImagen";
             this.txtUrlImagen.Size = new System.Drawing.Size(121, 20);
             this.txtUrlImagen.TabIndex = 5;
@@ -194,7 +178,7 @@
             // 
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodigo.Location = new System.Drawing.Point(13, 79);
+            this.lblCodigo.Location = new System.Drawing.Point(13, 83);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(60, 16);
             this.lblCodigo.TabIndex = 14;
@@ -202,7 +186,7 @@
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(123, 75);
+            this.txtCodigo.Location = new System.Drawing.Point(123, 79);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(121, 20);
             this.txtCodigo.TabIndex = 0;
@@ -218,54 +202,70 @@
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(123, 290);
+            this.txtPrecio.Location = new System.Drawing.Point(123, 220);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(121, 20);
             this.txtPrecio.TabIndex = 6;
             // 
-            // lblValidacionCodigo
+            // lblDescripcion
             // 
-            this.lblValidacionCodigo.AutoSize = true;
-            this.lblValidacionCodigo.Font = new System.Drawing.Font("Mongolian Baiti", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValidacionCodigo.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblValidacionCodigo.Location = new System.Drawing.Point(111, 94);
-            this.lblValidacionCodigo.Name = "lblValidacionCodigo";
-            this.lblValidacionCodigo.Size = new System.Drawing.Size(148, 11);
-            this.lblValidacionCodigo.TabIndex = 17;
-            this.lblValidacionCodigo.Text = "Debe completar el codigo";
+            this.lblDescripcion.AutoSize = true;
+            this.lblDescripcion.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.Location = new System.Drawing.Point(13, 135);
+            this.lblDescripcion.Name = "lblDescripcion";
+            this.lblDescripcion.Size = new System.Drawing.Size(94, 16);
+            this.lblDescripcion.TabIndex = 1;
+            this.lblDescripcion.Text = "Descripcion";
             // 
-            // lblValidacionNombre
+            // txtDescripcion
             // 
-            this.lblValidacionNombre.AutoSize = true;
-            this.lblValidacionNombre.Font = new System.Drawing.Font("Mongolian Baiti", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValidacionNombre.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblValidacionNombre.Location = new System.Drawing.Point(107, 131);
-            this.lblValidacionNombre.Name = "lblValidacionNombre";
-            this.lblValidacionNombre.Size = new System.Drawing.Size(152, 11);
-            this.lblValidacionNombre.TabIndex = 18;
-            this.lblValidacionNombre.Text = "Debe completar el nombre";
+            this.txtDescripcion.Location = new System.Drawing.Point(123, 134);
+            this.txtDescripcion.Name = "txtDescripcion";
+            this.txtDescripcion.Size = new System.Drawing.Size(121, 20);
+            this.txtDescripcion.TabIndex = 2;
             // 
-            // lblValidacionDescripcion
+            // textBox1
             // 
-            this.lblValidacionDescripcion.AutoSize = true;
-            this.lblValidacionDescripcion.Font = new System.Drawing.Font("Mongolian Baiti", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValidacionDescripcion.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblValidacionDescripcion.Location = new System.Drawing.Point(107, 171);
-            this.lblValidacionDescripcion.Name = "lblValidacionDescripcion";
-            this.lblValidacionDescripcion.Size = new System.Drawing.Size(174, 11);
-            this.lblValidacionDescripcion.TabIndex = 19;
-            this.lblValidacionDescripcion.Text = "Debe completar la descripcion";
+            this.textBox1.Location = new System.Drawing.Point(12, 294);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(121, 20);
+            this.textBox1.TabIndex = 17;
             // 
             // lblValidacionPrecio
             // 
             this.lblValidacionPrecio.AutoSize = true;
-            this.lblValidacionPrecio.Font = new System.Drawing.Font("Mongolian Baiti", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblValidacionPrecio.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lblValidacionPrecio.Location = new System.Drawing.Point(114, 314);
+            this.lblValidacionPrecio.Location = new System.Drawing.Point(62, 220);
             this.lblValidacionPrecio.Name = "lblValidacionPrecio";
-            this.lblValidacionPrecio.Size = new System.Drawing.Size(145, 11);
-            this.lblValidacionPrecio.TabIndex = 20;
-            this.lblValidacionPrecio.Text = "Debe completar el precio";
+            this.lblValidacionPrecio.Size = new System.Drawing.Size(11, 13);
+            this.lblValidacionPrecio.TabIndex = 18;
+            this.lblValidacionPrecio.Text = "*";
+            // 
+            // lblValidacionCodigo
+            // 
+            this.lblValidacionCodigo.AutoSize = true;
+            this.lblValidacionCodigo.Location = new System.Drawing.Point(76, 79);
+            this.lblValidacionCodigo.Name = "lblValidacionCodigo";
+            this.lblValidacionCodigo.Size = new System.Drawing.Size(11, 13);
+            this.lblValidacionCodigo.TabIndex = 19;
+            this.lblValidacionCodigo.Text = "*";
+            // 
+            // lblValidacionNombre
+            // 
+            this.lblValidacionNombre.AutoSize = true;
+            this.lblValidacionNombre.Location = new System.Drawing.Point(76, 107);
+            this.lblValidacionNombre.Name = "lblValidacionNombre";
+            this.lblValidacionNombre.Size = new System.Drawing.Size(11, 13);
+            this.lblValidacionNombre.TabIndex = 20;
+            this.lblValidacionNombre.Text = "*";
+            // 
+            // lblValidacionDescripcion
+            // 
+            this.lblValidacionDescripcion.AutoSize = true;
+            this.lblValidacionDescripcion.Location = new System.Drawing.Point(106, 134);
+            this.lblValidacionDescripcion.Name = "lblValidacionDescripcion";
+            this.lblValidacionDescripcion.Size = new System.Drawing.Size(11, 13);
+            this.lblValidacionDescripcion.TabIndex = 21;
+            this.lblValidacionDescripcion.Text = "*";
             // 
             // FrmAltaArticulo
             // 
@@ -273,10 +273,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
             this.ClientSize = new System.Drawing.Size(520, 342);
-            this.Controls.Add(this.lblValidacionPrecio);
             this.Controls.Add(this.lblValidacionDescripcion);
             this.Controls.Add(this.lblValidacionNombre);
             this.Controls.Add(this.lblValidacionCodigo);
+            this.Controls.Add(this.lblValidacionPrecio);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.pbxAgregado);
             this.Controls.Add(this.txtCodigo);
@@ -296,7 +297,6 @@
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.lblNombre);
             this.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(536, 381);
             this.MinimumSize = new System.Drawing.Size(536, 381);
             this.Name = "FrmAltaArticulo";
@@ -312,13 +312,11 @@
         #endregion
 
         private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.Label lblMarca;
         private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.Label lblImagen;
         private System.Windows.Forms.Label lblPrecio;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.ComboBox cboMarca;
         private System.Windows.Forms.ComboBox cboCategoria;
         private System.Windows.Forms.Button btnAceptar;
@@ -328,10 +326,13 @@
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.TextBox txtPrecio;
+        public System.Windows.Forms.PictureBox pbxAgregado;
+        private System.Windows.Forms.Label lblDescripcion;
+        private System.Windows.Forms.TextBox txtDescripcion;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lblValidacionPrecio;
         private System.Windows.Forms.Label lblValidacionCodigo;
         private System.Windows.Forms.Label lblValidacionNombre;
         private System.Windows.Forms.Label lblValidacionDescripcion;
-        private System.Windows.Forms.Label lblValidacionPrecio;
-        public System.Windows.Forms.PictureBox pbxAgregado;
     }
 }

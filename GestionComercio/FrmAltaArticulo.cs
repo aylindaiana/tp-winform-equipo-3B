@@ -121,61 +121,101 @@ namespace GestionComercio
             bool correcto = true;
             decimal precio;
 
-            if(!decimal.TryParse(txtPrecio.Text,out precio))
+            if (!decimal.TryParse(txtPrecio.Text, out precio))
             {
                 lblValidacionPrecio.ForeColor = Color.Red;
+                lblValidacionPrecio.Text = "*";
+                lblValidacionPrecio.Visible = true;
+                lblValidacionPrecio.Font = new Font(lblValidacionPrecio.Font.FontFamily, 14); // el 14 es el tamaño que le puse al *
+
                 MessageBox.Show("Precio Invalido, Ingrese uno correcto");
                 correcto = false;
-            } else if (string.IsNullOrEmpty(txtPrecio.Text))
+            }
+            else if (string.IsNullOrEmpty(txtPrecio.Text))
             {
                 lblValidacionPrecio.ForeColor = Color.Red;
+                lblValidacionPrecio.Text = "*";
+                lblValidacionPrecio.Visible = true;
+                lblValidacionPrecio.Font = new Font(lblValidacionPrecio.Font.FontFamily, 14); 
+
                 MessageBox.Show("El campo PRECIO debe completarse");
                 correcto = false;
-            } else
+            }
+            else
             {
                 lblValidacionPrecio.ForeColor = Color.DarkGray;
+                lblValidacionPrecio.Visible = false;
             }
 
             if (string.IsNullOrEmpty(txtCodigo.Text))
             {
                 lblValidacionCodigo.ForeColor = Color.Red;
+                lblValidacionCodigo.Text = "*";
+                lblValidacionCodigo.Visible = true;
+                lblValidacionCodigo.Font = new Font(lblValidacionCodigo.Font.FontFamily, 14);
+
                 MessageBox.Show("El campo CODIGO debe completarse");
                 correcto = false;
-            } else
+            }
+            else
             {
-                lblValidacionCodigo.ForeColor= Color.DarkGray;
+                lblValidacionCodigo.ForeColor = Color.DarkGray;
+                lblValidacionCodigo.Visible = false;
             }
 
-            if(string.IsNullOrEmpty(txtNombre.Text))
+            if (string.IsNullOrEmpty(txtNombre.Text))
             {
                 lblValidacionNombre.ForeColor = Color.Red;
+                lblValidacionNombre.Text = "*";
+                lblValidacionNombre.Visible = true;
+                lblValidacionNombre.Font = new Font(lblValidacionNombre.Font.FontFamily, 14); 
+
                 MessageBox.Show("El campo NOMBRE debe completarse");
                 correcto = false;
-            } else if(soloNumeros(txtNombre.Text))
+            }
+            else if (soloNumeros(txtNombre.Text))
             {
-                lblValidacionNombre.ForeColor= Color.Red;
+                lblValidacionNombre.ForeColor = Color.Red;
+                lblValidacionNombre.Text = "*";
+                lblValidacionNombre.Visible = true;
+                lblValidacionNombre.Font = new Font(lblValidacionNombre.Font.FontFamily, 14); 
+
                 MessageBox.Show("Ingrese un nombre correcto que NO lleve Numeros");
                 correcto = false;
-            }else
+            }
+            else
             {
                 lblValidacionNombre.ForeColor = Color.DarkGray;
+                lblValidacionNombre.Visible = false;
             }
 
-            if(string.IsNullOrEmpty(txtDescripcion.Text))
+            if (string.IsNullOrEmpty(txtDescripcion.Text))
             {
                 lblValidacionDescripcion.ForeColor = Color.Red;
+                lblValidacionDescripcion.Text = "*";
+                lblValidacionDescripcion.Visible = true;
+                lblValidacionDescripcion.Font = new Font(lblValidacionDescripcion.Font.FontFamily, 14); // Ajusta el tamaño según sea necesario
+
                 MessageBox.Show("El campo DESCRIPCION debe completarse");
                 correcto = false;
-            } else if(soloNumeros(txtDescripcion.Text))
+            }
+            else if (soloNumeros(txtDescripcion.Text))
             {
                 lblValidacionDescripcion.ForeColor = Color.Red;
+                lblValidacionDescripcion.Text = "*";
+                lblValidacionDescripcion.Visible = true;
+                lblValidacionDescripcion.Font = new Font(lblValidacionDescripcion.Font.FontFamily, 14); // Ajusta el tamaño según sea necesario
+
                 MessageBox.Show("Ingrese una descripcion correcta que NO lleve Numeros");
                 correcto = false;
-            } else
-            {
-                lblValidacionDescripcion.ForeColor= Color.DarkGray;
             }
-                
+            else
+            {
+                lblValidacionDescripcion.ForeColor = Color.DarkGray;
+                lblValidacionDescripcion.Visible = false;
+            }
+
+
             return correcto;
         }
         private bool soloNumeros(string cadena)

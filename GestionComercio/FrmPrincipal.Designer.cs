@@ -48,7 +48,8 @@
             this.msArchivo = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmAgregarMarca = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmAgregarCategoria = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.flecha_izq = new System.Windows.Forms.Button();
+            this.flecha_der = new System.Windows.Forms.Button();
             this.pnlTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticulo)).BeginInit();
@@ -128,12 +129,15 @@
             this.dgvArticulos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvArticulos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvArticulos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArticulos.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dgvArticulos.Location = new System.Drawing.Point(112, 141);
             this.dgvArticulos.MinimumSize = new System.Drawing.Size(743, 369);
             this.dgvArticulos.MultiSelect = false;
             this.dgvArticulos.Name = "dgvArticulos";
+            this.dgvArticulos.RowHeadersVisible = false;
             this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvArticulos.Size = new System.Drawing.Size(743, 369);
             this.dgvArticulos.TabIndex = 9;
@@ -192,6 +196,7 @@
             // ComboBoxCriterio
             // 
             this.ComboBoxCriterio.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.ComboBoxCriterio.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBoxCriterio.FormattingEnabled = true;
             this.ComboBoxCriterio.Location = new System.Drawing.Point(374, 536);
             this.ComboBoxCriterio.Name = "ComboBoxCriterio";
@@ -211,6 +216,7 @@
             // ComboBoxCampo
             // 
             this.ComboBoxCampo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.ComboBoxCampo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBoxCampo.FormattingEnabled = true;
             this.ComboBoxCampo.Location = new System.Drawing.Point(203, 537);
             this.ComboBoxCampo.Name = "ComboBoxCampo";
@@ -231,8 +237,7 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.msArchivo,
-            this.aboutToolStripMenuItem});
+            this.msArchivo});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1085, 24);
@@ -245,8 +250,8 @@
             this.tsmAgregarMarca,
             this.tsmAgregarCategoria});
             this.msArchivo.Name = "msArchivo";
-            this.msArchivo.Size = new System.Drawing.Size(60, 20);
-            this.msArchivo.Text = "Archivo";
+            this.msArchivo.Size = new System.Drawing.Size(84, 20);
+            this.msArchivo.Text = "Propiedades";
             // 
             // tsmAgregarMarca
             // 
@@ -262,11 +267,25 @@
             this.tsmAgregarCategoria.Text = "Agregar categoria de articulo";
             this.tsmAgregarCategoria.Click += new System.EventHandler(this.tsmAgregarCategoria_Click);
             // 
-            // aboutToolStripMenuItem
+            // flecha_izq
             // 
-            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
-            this.aboutToolStripMenuItem.Text = "about";
+            this.flecha_izq.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.flecha_izq.Location = new System.Drawing.Point(907, 344);
+            this.flecha_izq.Name = "flecha_izq";
+            this.flecha_izq.Size = new System.Drawing.Size(39, 33);
+            this.flecha_izq.TabIndex = 37;
+            this.flecha_izq.Text = "<---";
+            this.flecha_izq.UseVisualStyleBackColor = true;
+            // 
+            // flecha_der
+            // 
+            this.flecha_der.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.flecha_der.Location = new System.Drawing.Point(978, 344);
+            this.flecha_der.Name = "flecha_der";
+            this.flecha_der.Size = new System.Drawing.Size(39, 33);
+            this.flecha_der.TabIndex = 39;
+            this.flecha_der.Text = "--->";
+            this.flecha_der.UseVisualStyleBackColor = true;
             // 
             // FrmPrincipal
             // 
@@ -274,6 +293,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1085, 581);
+            this.Controls.Add(this.flecha_der);
+            this.Controls.Add(this.flecha_izq);
             this.Controls.Add(this.BotonFiltrar);
             this.Controls.Add(this.textBoxFiltroAvanzado);
             this.Controls.Add(this.labelFiltro);
@@ -290,6 +311,7 @@
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MinimumSize = new System.Drawing.Size(1101, 620);
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -324,9 +346,10 @@
         private System.Windows.Forms.Label labelCampo;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem msArchivo;
-        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tsmAgregarMarca;
         private System.Windows.Forms.ToolStripMenuItem tsmAgregarCategoria;
+        private System.Windows.Forms.Button flecha_izq;
+        private System.Windows.Forms.Button flecha_der;
     }
 }
 
