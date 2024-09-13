@@ -271,6 +271,7 @@ namespace GestionComercio
                 nuevaImagen = imagenes.BuscarImagen(articulo.Id);
                 txtUrlImagen.Text = nuevaImagen.ImagenUrl;
                 CargarImagen(nuevaImagen.ImagenUrl);
+
             }
             catch (Exception)
             {
@@ -302,6 +303,13 @@ namespace GestionComercio
             MessageBox.Show("Agregado Exitosamente!");
         }
 
+        
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FrmImagenNuevaModificar imagenNueva = new FrmImagenNuevaModificar();
 
+            imagenNueva.ShowDialog();
+            
+        }
     }
 }

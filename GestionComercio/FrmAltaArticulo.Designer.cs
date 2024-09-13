@@ -50,6 +50,7 @@
             this.lblValidacionDescripcion = new System.Windows.Forms.Label();
             this.txtUrlImagen = new System.Windows.Forms.TextBox();
             this.pbxAgregado = new System.Windows.Forms.PictureBox();
+            this.btnNuevaImagen = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxAgregado)).BeginInit();
             this.SuspendLayout();
             // 
@@ -255,12 +256,23 @@
             this.pbxAgregado.TabIndex = 16;
             this.pbxAgregado.TabStop = false;
             // 
+            // btnNuevaImagen
+            // 
+            this.btnNuevaImagen.Location = new System.Drawing.Point(281, 301);
+            this.btnNuevaImagen.Name = "btnNuevaImagen";
+            this.btnNuevaImagen.Size = new System.Drawing.Size(124, 30);
+            this.btnNuevaImagen.TabIndex = 22;
+            this.btnNuevaImagen.Text = "Agregar Más Imagenes";
+            this.btnNuevaImagen.UseVisualStyleBackColor = true;
+            this.btnNuevaImagen.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmAltaArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(464, 416);
+            this.ClientSize = new System.Drawing.Size(478, 416);
+            this.Controls.Add(this.btnNuevaImagen);
             this.Controls.Add(this.pbxAgregado);
             this.Controls.Add(this.lblValidacionDescripcion);
             this.Controls.Add(this.lblValidacionNombre);
@@ -319,5 +331,6 @@
         private System.Windows.Forms.Label lblValidacionDescripcion;
         private System.Windows.Forms.TextBox txtUrlImagen;
         public System.Windows.Forms.PictureBox pbxAgregado;
+        private System.Windows.Forms.Button btnNuevaImagen;
     }
 }
