@@ -37,10 +37,13 @@
             // 
             // lblTitulo
             // 
+            this.lblTitulo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Cambria", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.lblTitulo.Location = new System.Drawing.Point(28, 28);
+            this.lblTitulo.MaximumSize = new System.Drawing.Size(213, 64);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(213, 64);
             this.lblTitulo.TabIndex = 0;
@@ -78,6 +81,7 @@
             this.btnAceptar.TabIndex = 4;
             this.btnAceptar.Text = "AGREGAR";
             this.btnAceptar.UseVisualStyleBackColor = false;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
@@ -111,7 +115,9 @@
             this.MaximumSize = new System.Drawing.Size(300, 298);
             this.MinimumSize = new System.Drawing.Size(300, 298);
             this.Name = "FrmAddMarcaYCategoria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nuevo";
+            this.Load += new System.EventHandler(this.FrmAddMarcaYCategoria_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
