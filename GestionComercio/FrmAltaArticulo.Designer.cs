@@ -50,7 +50,6 @@
             this.lblValidacionDescripcion = new System.Windows.Forms.Label();
             this.txtUrlImagen = new System.Windows.Forms.TextBox();
             this.pbxAgregado = new System.Windows.Forms.PictureBox();
-            this.BotonAgregarIMG = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbxAgregado)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,11 +87,11 @@
             // 
             this.lblImagen.AutoSize = true;
             this.lblImagen.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblImagen.Location = new System.Drawing.Point(333, 87);
+            this.lblImagen.Location = new System.Drawing.Point(12, 311);
             this.lblImagen.Name = "lblImagen";
-            this.lblImagen.Size = new System.Drawing.Size(75, 16);
+            this.lblImagen.Size = new System.Drawing.Size(60, 16);
             this.lblImagen.TabIndex = 4;
-            this.lblImagen.Text = "Imagenes";
+            this.lblImagen.Text = "Imagen";
             // 
             // lblPrecio
             // 
@@ -134,7 +133,7 @@
             this.btnAceptar.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar.Location = new System.Drawing.Point(109, 347);
+            this.btnAceptar.Location = new System.Drawing.Point(109, 369);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(90, 35);
             this.btnAceptar.TabIndex = 7;
@@ -147,7 +146,7 @@
             this.btnCerrar.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btnCerrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrar.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCerrar.Location = new System.Drawing.Point(218, 347);
+            this.btnCerrar.Location = new System.Drawing.Point(218, 369);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(87, 35);
             this.btnCerrar.TabIndex = 8;
@@ -241,7 +240,7 @@
             // 
             // txtUrlImagen
             // 
-            this.txtUrlImagen.Location = new System.Drawing.Point(309, 260);
+            this.txtUrlImagen.Location = new System.Drawing.Point(123, 311);
             this.txtUrlImagen.Name = "txtUrlImagen";
             this.txtUrlImagen.Size = new System.Drawing.Size(121, 20);
             this.txtUrlImagen.TabIndex = 5;
@@ -249,29 +248,19 @@
             // 
             // pbxAgregado
             // 
-            this.pbxAgregado.Location = new System.Drawing.Point(309, 116);
+            this.pbxAgregado.Location = new System.Drawing.Point(281, 84);
             this.pbxAgregado.Name = "pbxAgregado";
-            this.pbxAgregado.Size = new System.Drawing.Size(119, 129);
+            this.pbxAgregado.Size = new System.Drawing.Size(153, 171);
             this.pbxAgregado.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbxAgregado.TabIndex = 16;
             this.pbxAgregado.TabStop = false;
-            // 
-            // BotonAgregarIMG
-            // 
-            this.BotonAgregarIMG.Location = new System.Drawing.Point(333, 286);
-            this.BotonAgregarIMG.Name = "BotonAgregarIMG";
-            this.BotonAgregarIMG.Size = new System.Drawing.Size(75, 23);
-            this.BotonAgregarIMG.TabIndex = 22;
-            this.BotonAgregarIMG.Text = "Agregar";
-            this.BotonAgregarIMG.UseVisualStyleBackColor = true;
             // 
             // FrmAltaArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(464, 394);
-            this.Controls.Add(this.BotonAgregarIMG);
+            this.ClientSize = new System.Drawing.Size(464, 416);
             this.Controls.Add(this.pbxAgregado);
             this.Controls.Add(this.lblValidacionDescripcion);
             this.Controls.Add(this.lblValidacionNombre);
@@ -299,7 +288,6 @@
             this.MaximizeBox = false;
             this.Name = "FrmAltaArticulo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Agregar Articulo";
             this.Load += new System.EventHandler(this.FrmAltaArticulo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbxAgregado)).EndInit();
             this.ResumeLayout(false);
@@ -331,6 +319,5 @@
         private System.Windows.Forms.Label lblValidacionDescripcion;
         private System.Windows.Forms.TextBox txtUrlImagen;
         public System.Windows.Forms.PictureBox pbxAgregado;
-        private System.Windows.Forms.Button BotonAgregarIMG;
     }
 }

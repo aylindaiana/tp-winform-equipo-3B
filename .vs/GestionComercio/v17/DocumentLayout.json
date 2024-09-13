@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\usuario\\Desktop\\tp_progra3\\GestionDeComercio\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|C:\\Users\\usuario\\Desktop\\tp_progra3\\GestionDeComercio\\gestioncomercio\\frmaltaarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|c:\\users\\usuario\\desktop\\tp_progra3\\gestiondecomercio\\gestioncomercio\\frmaltaarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|solutionrelative:gestioncomercio\\frmaltaarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|c:\\users\\usuario\\desktop\\tp_progra3\\gestiondecomercio\\gestioncomercio\\frmaltaarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|solutionrelative:gestioncomercio\\frmaltaarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|c:\\users\\usuario\\desktop\\tp_progra3\\gestiondecomercio\\gestioncomercio\\frmaltaarticulo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|solutionrelative:gestioncomercio\\frmaltaarticulo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|C:\\Users\\usuario\\Desktop\\tp_progra3\\GestionDeComercio\\gestioncomercio\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -26,11 +18,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "FrmPrincipal.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\usuario\\Desktop\\tp_progra3\\GestionDeComercio\\GestionComercio\\FrmPrincipal.cs",
               "RelativeDocumentMoniker": "GestionComercio\\FrmPrincipal.cs",
@@ -40,32 +32,6 @@
               "WhenOpened": "2024-09-08T00:27:51.424Z",
               "IsPinned": true,
               "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FrmAltaArticulo.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\usuario\\Desktop\\tp_progra3\\GestionDeComercio\\GestionComercio\\FrmAltaArticulo.Designer.cs",
-              "RelativeDocumentMoniker": "GestionComercio\\FrmAltaArticulo.Designer.cs",
-              "ToolTip": "C:\\Users\\usuario\\Desktop\\tp_progra3\\GestionDeComercio\\GestionComercio\\FrmAltaArticulo.Designer.cs",
-              "RelativeToolTip": "GestionComercio\\FrmAltaArticulo.Designer.cs",
-              "ViewState": "AQIAAOsAAAAAAAAAAAAIwAsBAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-13T03:09:40.544Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FrmAltaArticulo.cs",
-              "DocumentMoniker": "C:\\Users\\usuario\\Desktop\\tp_progra3\\GestionDeComercio\\GestionComercio\\FrmAltaArticulo.cs",
-              "RelativeDocumentMoniker": "GestionComercio\\FrmAltaArticulo.cs",
-              "ToolTip": "C:\\Users\\usuario\\Desktop\\tp_progra3\\GestionDeComercio\\GestionComercio\\FrmAltaArticulo.cs",
-              "RelativeToolTip": "GestionComercio\\FrmAltaArticulo.cs",
-              "ViewState": "AQIAACQBAAAAAAAAAAAowDABAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-13T01:26:17.439Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
