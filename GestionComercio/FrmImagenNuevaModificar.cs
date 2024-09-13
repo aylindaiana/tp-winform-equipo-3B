@@ -77,5 +77,12 @@ namespace GestionComercio
         {
             CargarImagen(txtImagen.Text);
         }
+
+        private void cboImagenes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+              CargarImagen(cboImagenes.SelectedItem.ToString());
+            
+        }
     }
 }

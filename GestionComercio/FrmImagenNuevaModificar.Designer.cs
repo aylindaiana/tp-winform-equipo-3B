@@ -74,6 +74,7 @@
             this.cboImagenes.Name = "cboImagenes";
             this.cboImagenes.Size = new System.Drawing.Size(121, 21);
             this.cboImagenes.TabIndex = 3;
+            this.cboImagenes.SelectedIndexChanged += new System.EventHandler(this.cboImagenes_SelectedIndexChanged);
             // 
             // pbxImagen
             // 
