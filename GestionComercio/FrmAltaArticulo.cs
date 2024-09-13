@@ -301,5 +301,7 @@ namespace GestionComercio
 
             MessageBox.Show("Agregado Exitosamente!");
         }
+
+
     }
 }
