@@ -9,19 +9,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace GestionComercio
 {
     public partial class FrmAltaArticulo : Form
     {
-        private Articulo articulo = null; //para saber si es agregar un articulo nuevo
-        private Imagen nuevaImagen = new Imagen();
+        private Articulo articulo = null;
+        private List<Imagen> imagenesArt = null;
+
 
         public FrmAltaArticulo()
         {
             InitializeComponent();
             //agregar articulo
             lblTitulo.Text = "Agregar Articulo: ";
+
+            btnModificarUrlImagen.Enabled = false;
+            btnModificarUrlImagen.Visible = false;
         }
 
         public FrmAltaArticulo(Articulo articulo)
@@ -29,13 +34,17 @@ namespace GestionComercio
             InitializeComponent();
             //modifica articulo
             this.articulo = articulo;
-            lblTitulo.Text = "Modificar Articulo: ";        
+            lblTitulo.Text = "Modificar Articulo: ";
+
+            btnModificarUrlImagen.Enabled = true;
+            btnModificarUrlImagen.Visible = true;
         }
 
         private void FrmAltaArticulo_Load(object sender, EventArgs e)
         {
             MarcaManager marcas = new MarcaManager();
             CategoriaManager categorias = new CategoriaManager();
+            imagenesArt = new List<Imagen>();
 
             try
             {
@@ -46,7 +55,6 @@ namespace GestionComercio
                 cboCategoria.ValueMember = "Id";
                 cboCategoria.DisplayMember = "Descripcion";
 
-
                 if (articulo != null)
                     cargarDatosArticulo();
 
@@ -55,7 +63,7 @@ namespace GestionComercio
             {
                 MessageBox.Show(ex.ToString());
             }
-         
+
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -63,15 +71,13 @@ namespace GestionComercio
             Close();
         }
 
-
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             if (validarFiltro() != true)
                 return;
-            
 
-            if (articulo == null)
-                articulo = new Articulo();
+
+            if (articulo == null) articulo = new Articulo();
 
             try
             {
@@ -81,13 +87,14 @@ namespace GestionComercio
                 if (articulo.Id != 0)
                 {
                     modificarArt();
-                }else
+                }
+                else
                 {
                     crearNuevoArt();
                 }
-                
 
-                Close();                
+
+                Close();
 
             }
             catch (Exception ex)
@@ -97,24 +104,81 @@ namespace GestionComercio
             }
         }
 
-
-        public void CargarImagen(string imagen)
+        private void btnNuevaImagen_Click(object sender, EventArgs e)
         {
+            Imagen nuevaImagen = new Imagen();
+
+            nuevaImagen.ImagenUrl = txtUrlImagen.Text;
+            imagenesArt.Add(nuevaImagen);
+
+            txtUrlImagen.TextChanged -= txtUrlImagen_TextChanged;
+            txtUrlImagen.Clear();
+            txtUrlImagen.TextChanged += txtUrlImagen_TextChanged;
+
             try
             {
-                pbxAgregado.Load(imagen);
-            }
-            catch (Exception)
-            {
+                CargarImagen(nuevaImagen.ImagenUrl);
+                CargarCbx();
 
-                pbxAgregado.Load("https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png");
+                MessageBox.Show("se agrego correctamente");
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
+        }
+
+        private void cmbImagenes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbImagenes.DataSource != null)
+                CargarImagen(cmbImagenes.SelectedItem.ToString());
         }
 
         private void txtUrlImagen_TextChanged(object sender, EventArgs e)
         {
             CargarImagen(txtUrlImagen.Text);
         }
+
+        private void btnModificarUrlImagen_Click(object sender, EventArgs e)
+        {
+
+            int index = imagenesArt.FindIndex(x => x.ImagenUrl == cmbImagenes.SelectedItem.ToString());
+
+            if (index != -1)
+            {
+                imagenesArt[index].ImagenUrl = txtUrlImagen.Text;
+            }
+            else
+            {   
+                Imagen aux = new Imagen();
+                aux.ImagenUrl = txtUrlImagen.Text;
+                imagenesArt.Add(aux);
+                index = 0;
+            }
+ 
+            
+            txtUrlImagen.TextChanged -= txtUrlImagen_TextChanged;
+            txtUrlImagen.Clear();
+            txtUrlImagen.TextChanged += txtUrlImagen_TextChanged;
+
+            try
+            {    
+                CargarImagen(imagenesArt[index].ImagenUrl);   
+                CargarCbx();
+
+                MessageBox.Show("se Modifico correctamente");
+            }
+            catch (Exception ex)
+            {
+                
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+
+
+
 
         private bool validarFiltro()
         {
@@ -136,7 +200,7 @@ namespace GestionComercio
                 lblValidacionPrecio.ForeColor = Color.Red;
                 lblValidacionPrecio.Text = "*";
                 lblValidacionPrecio.Visible = true;
-                lblValidacionPrecio.Font = new Font(lblValidacionPrecio.Font.FontFamily, 14); 
+                lblValidacionPrecio.Font = new Font(lblValidacionPrecio.Font.FontFamily, 14);
 
                 MessageBox.Show("El campo PRECIO debe completarse");
                 correcto = false;
@@ -168,7 +232,7 @@ namespace GestionComercio
                 lblValidacionNombre.ForeColor = Color.Red;
                 lblValidacionNombre.Text = "*";
                 lblValidacionNombre.Visible = true;
-                lblValidacionNombre.Font = new Font(lblValidacionNombre.Font.FontFamily, 14); 
+                lblValidacionNombre.Font = new Font(lblValidacionNombre.Font.FontFamily, 14);
 
                 MessageBox.Show("El campo NOMBRE debe completarse");
                 correcto = false;
@@ -178,7 +242,7 @@ namespace GestionComercio
                 lblValidacionNombre.ForeColor = Color.Red;
                 lblValidacionNombre.Text = "*";
                 lblValidacionNombre.Visible = true;
-                lblValidacionNombre.Font = new Font(lblValidacionNombre.Font.FontFamily, 14); 
+                lblValidacionNombre.Font = new Font(lblValidacionNombre.Font.FontFamily, 14);
 
                 MessageBox.Show("Ingrese un nombre correcto que NO lleve Numeros");
                 correcto = false;
@@ -218,6 +282,7 @@ namespace GestionComercio
 
             return correcto;
         }
+
         private bool soloNumeros(string cadena)
         {
             foreach (char caracter in cadena)
@@ -228,7 +293,7 @@ namespace GestionComercio
             return true;
         }
 
-        private void obtenerDatosCargados() 
+        private void obtenerDatosCargados()
         {
             decimal precio;
 
@@ -240,13 +305,13 @@ namespace GestionComercio
                 articulo.TipoMarca = (Marca)cboMarca.SelectedItem;
                 articulo.TipoCategoria = (Categoria)cboCategoria.SelectedItem;
 
-                nuevaImagen.ImagenUrl = txtUrlImagen.Text;
+                //nuevaImagen.ImagenUrl = txtUrlImagen.Text;
 
                 if (decimal.TryParse(txtPrecio.Text, out precio))
                 {
                     articulo.Precio = precio;
                 }
-                
+
             }
             catch (Exception)
             {
@@ -255,7 +320,7 @@ namespace GestionComercio
             }
         }
 
-        private void cargarDatosArticulo() 
+        private void cargarDatosArticulo()
         {
             ImagenManager imagenes = new ImagenManager();
 
@@ -268,9 +333,13 @@ namespace GestionComercio
                 cboCategoria.SelectedValue = articulo.TipoCategoria.Id;
                 txtPrecio.Text = articulo.Precio.ToString();
 
-                nuevaImagen = imagenes.BuscarImagen(articulo.Id);
-                txtUrlImagen.Text = nuevaImagen.ImagenUrl;
-                CargarImagen(nuevaImagen.ImagenUrl);
+                imagenesArt = new List<Imagen>(imagenes.ListarPorArticuloId(articulo.Id));
+
+                if (imagenesArt.Count != 0)
+                {
+                    txtUrlImagen.Text = imagenesArt[0].ImagenUrl;
+                    CargarCbx();
+                }
 
             }
             catch (Exception)
@@ -280,14 +349,27 @@ namespace GestionComercio
             }
         }
 
-        private void modificarArt() 
+        private void modificarArt()
         {
             ArticuloManager articuloManager = new ArticuloManager();
             ImagenManager imagenManager = new ImagenManager();
 
             articuloManager.modificar(articulo);
-            nuevaImagen.IdArticulo = articulo.Id;
-            imagenManager.modificar(nuevaImagen);
+
+            foreach (Imagen item in imagenesArt)
+            {
+                item.IdArticulo = articulo.Id;
+
+                if (item.Id != 0)
+                {
+                    imagenManager.modificar(item);
+                }
+                else
+                {
+                    imagenManager.Agregar(item.ImagenUrl,articulo.Id);
+                }
+                        
+            }
 
             MessageBox.Show("Modificado Exitosamente!");
         }
@@ -298,18 +380,40 @@ namespace GestionComercio
             ImagenManager imagenManager = new ImagenManager();
 
             articuloManager.Agregar(articulo);
-            imagenManager.Agregar(nuevaImagen.ImagenUrl);
+            //hay que agregar una lista
+
+            foreach (Imagen item in imagenesArt)
+            {
+                imagenManager.Agregar(item.ImagenUrl);
+            }
 
             MessageBox.Show("Agregado Exitosamente!");
         }
 
-        
-        private void button1_Click(object sender, EventArgs e)
+        private void CargarCbx()
         {
-            FrmImagenNuevaModificar imagenNueva = new FrmImagenNuevaModificar();
+            cmbImagenes.DataSource = null;
 
-            imagenNueva.ShowDialog();
-            
+            cmbImagenes.DataSource = imagenesArt;
+            cmbImagenes.ValueMember = "Id";
+            cmbImagenes.DisplayMember = "ImagenUrl";
         }
+
+        private void CargarImagen(string imagen)
+        {
+            try
+            {
+                pbxAgregado.Load(imagen);
+            }
+            catch (Exception ex)
+            {
+
+                pbxAgregado.Load("https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png");
+
+                if (!string.IsNullOrWhiteSpace(txtUrlImagen.Text))
+                    MessageBox.Show(ex.ToString());
+            }
+        }
+
     }
 }

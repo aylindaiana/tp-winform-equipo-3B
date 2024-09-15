@@ -179,7 +179,7 @@ namespace GestionComercio
                 else
                     pbxArticulo.Load("https://myemotos.cl/wp-content/uploads/2024/06/sin_imagen.jpg");
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 pbxArticulo.Load("https://myemotos.cl/wp-content/uploads/2024/06/sin_imagen.jpg");
 

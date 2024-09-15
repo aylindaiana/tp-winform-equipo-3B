@@ -134,6 +134,30 @@ namespace Manager
             }
         }
 
+
+        public void Agregar(string url, int IdArt)
+        {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                datos.SetearConsulta("INSERT INTO IMAGENES (idArticulo, ImagenUrl) VALUES ( @IdArt, @ImagenUrl)");
+                datos.SetearParametro("@IdArt", IdArt);
+                datos.SetearParametro("@ImagenUrl", url);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.CerrarConeccion();
+            }
+        }
+
+
         public void modificar(Imagen ImgModificada)
         {
             AccesoDatos datos = new AccesoDatos();
@@ -155,5 +179,6 @@ namespace Manager
                 datos.CerrarConeccion();
             }
         }
+
     }
 }

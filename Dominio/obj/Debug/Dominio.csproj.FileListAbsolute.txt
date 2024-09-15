@@ -16,3 +16,9 @@ C:\Users\aapan\Downloads\GestionDeComercio\Dominio\obj\Debug\Dominio.csproj.Asse
 C:\Users\aapan\Downloads\GestionDeComercio\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
 C:\Users\aapan\Downloads\GestionDeComercio\Dominio\obj\Debug\Dominio.dll
 C:\Users\aapan\Downloads\GestionDeComercio\Dominio\obj\Debug\Dominio.pdb
+C:\Users\BBARRERA\Desktop\repo\tp-winform-equipo-x\Dominio\bin\Debug\Dominio.dll
+C:\Users\BBARRERA\Desktop\repo\tp-winform-equipo-x\Dominio\bin\Debug\Dominio.pdb
+C:\Users\BBARRERA\Desktop\repo\tp-winform-equipo-x\Dominio\obj\Debug\Dominio.csproj.AssemblyReference.cache
+C:\Users\BBARRERA\Desktop\repo\tp-winform-equipo-x\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\BBARRERA\Desktop\repo\tp-winform-equipo-x\Dominio\obj\Debug\Dominio.dll
+C:\Users\BBARRERA\Desktop\repo\tp-winform-equipo-x\Dominio\obj\Debug\Dominio.pdb

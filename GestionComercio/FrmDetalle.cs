@@ -22,8 +22,8 @@ namespace GestionComercio
         {
             InitializeComponent();
             _articulo = articulo;
-
-            _imagenes = new List<Imagen>(); 
+            
+            _imagenes = new List<Imagen>();
             PosicionImg = 0; //indice inicial de la imagen
         }
 
@@ -43,11 +43,11 @@ namespace GestionComercio
 
                 lblTitulo.Text = _articulo.Nombre; //el titulo
 
-                _imagenes = ImgManager.ListarPorArticuloId(_articulo.Id); // Lista todas las imágenes del artículo
+                _imagenes = new List<Imagen> ( ImgManager.ListarPorArticuloId(_articulo.Id) ); // Lista todas las imágenes del artículo
                 if (_imagenes.Count > 0)
                 {
                     CargarImagen(_imagenes[0].ImagenUrl);
-                } //hago un else?
+                } //hago un else?  ----> try / cach
 
 
             }

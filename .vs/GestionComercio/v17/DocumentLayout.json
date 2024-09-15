@@ -1,50 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\aapan\\Downloads\\tp-winform-equipo-x\\",
+  "WorkspaceRootPath": "C:\\Users\\BBARRERA\\Desktop\\repo\\tp-winform-equipo-x\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|c:\\users\\aapan\\downloads\\tp-winform-equipo-x\\gestioncomercio\\frmimagennuevamodificar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|solutionrelative:gestioncomercio\\frmimagennuevamodificar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|C:\\Users\\aapan\\Downloads\\tp-winform-equipo-x\\gestioncomercio\\frmimagennuevamodificar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|solutionrelative:gestioncomercio\\frmimagennuevamodificar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|C:\\Users\\aapan\\Downloads\\tp-winform-equipo-x\\gestioncomercio\\frmaltaarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|solutionrelative:gestioncomercio\\frmaltaarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|C:\\Users\\aapan\\Downloads\\tp-winform-equipo-x\\gestioncomercio\\frmaddmarcaycategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|solutionrelative:gestioncomercio\\frmaddmarcaycategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|C:\\Users\\aapan\\Downloads\\tp-winform-equipo-x\\gestioncomercio\\frmaddmarcaycategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|solutionrelative:gestioncomercio\\frmaddmarcaycategoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|C:\\Users\\aapan\\Downloads\\tp-winform-equipo-x\\gestioncomercio\\frmaltaarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|c:\\users\\bbarrera\\desktop\\repo\\tp-winform-equipo-x\\gestioncomercio\\frmaltaarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|solutionrelative:gestioncomercio\\frmaltaarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{40015F15-FAD3-476B-85A7-CA316566FE6C}|Manager\\Manager.csproj|C:\\Users\\aapan\\Downloads\\tp-winform-equipo-x\\manager\\imagenmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{40015F15-FAD3-476B-85A7-CA316566FE6C}|Manager\\Manager.csproj|c:\\users\\bbarrera\\desktop\\repo\\tp-winform-equipo-x\\manager\\imagenmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{40015F15-FAD3-476B-85A7-CA316566FE6C}|Manager\\Manager.csproj|solutionrelative:manager\\imagenmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{40015F15-FAD3-476B-85A7-CA316566FE6C}|Manager\\Manager.csproj|C:\\Users\\aapan\\Downloads\\tp-winform-equipo-x\\manager\\categoriamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40015F15-FAD3-476B-85A7-CA316566FE6C}|Manager\\Manager.csproj|solutionrelative:manager\\categoriamanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|C:\\Users\\BBARRERA\\Desktop\\repo\\tp-winform-equipo-x\\gestioncomercio\\frmaltaarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|solutionrelative:gestioncomercio\\frmaltaarticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|C:\\Users\\aapan\\Downloads\\tp-winform-equipo-x\\gestioncomercio\\frmdetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|solutionrelative:gestioncomercio\\frmdetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{40015F15-FAD3-476B-85A7-CA316566FE6C}|Manager\\Manager.csproj|C:\\Users\\aapan\\Downloads\\tp-winform-equipo-x\\manager\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{40015F15-FAD3-476B-85A7-CA316566FE6C}|Manager\\Manager.csproj|solutionrelative:manager\\accesodatos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|C:\\Users\\aapan\\Downloads\\tp-winform-equipo-x\\gestioncomercio\\frmdetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|solutionrelative:gestioncomercio\\frmdetalle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|C:\\Users\\BBARRERA\\Desktop\\repo\\tp-winform-equipo-x\\gestioncomercio\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{655F38D3-DEDB-4ABA-9FF6-E9FE2EFF3298}|GestionComercio\\App.csproj|solutionrelative:gestioncomercio\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,137 +26,67 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FrmAltaArticulo.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\aapan\\Downloads\\tp-winform-equipo-x\\GestionComercio\\FrmAltaArticulo.cs",
-              "RelativeDocumentMoniker": "GestionComercio\\FrmAltaArticulo.cs",
-              "ToolTip": "C:\\Users\\aapan\\Downloads\\tp-winform-equipo-x\\GestionComercio\\FrmAltaArticulo.cs [Dise\u00F1o]",
-              "RelativeToolTip": "GestionComercio\\FrmAltaArticulo.cs [Dise\u00F1o]",
+              "DocumentIndex": 3,
+              "Title": "FrmPrincipal.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\BBARRERA\\Desktop\\repo\\tp-winform-equipo-x\\GestionComercio\\FrmPrincipal.cs",
+              "RelativeDocumentMoniker": "GestionComercio\\FrmPrincipal.cs",
+              "ToolTip": "C:\\Users\\BBARRERA\\Desktop\\repo\\tp-winform-equipo-x\\GestionComercio\\FrmPrincipal.cs [Dise\u00F1o]",
+              "RelativeToolTip": "GestionComercio\\FrmPrincipal.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-13T16:18:25.881Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FrmImagenNuevaModificar.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\aapan\\Downloads\\tp-winform-equipo-x\\GestionComercio\\FrmImagenNuevaModificar.cs",
-              "RelativeDocumentMoniker": "GestionComercio\\FrmImagenNuevaModificar.cs",
-              "ToolTip": "C:\\Users\\aapan\\Downloads\\tp-winform-equipo-x\\GestionComercio\\FrmImagenNuevaModificar.cs [Dise\u00F1o]",
-              "RelativeToolTip": "GestionComercio\\FrmImagenNuevaModificar.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-13T19:19:17.638Z",
+              "WhenOpened": "2024-09-13T22:15:16.284Z",
+              "IsPinned": true,
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FrmImagenNuevaModificar.cs",
-              "DocumentMoniker": "C:\\Users\\aapan\\Downloads\\tp-winform-equipo-x\\GestionComercio\\FrmImagenNuevaModificar.cs",
-              "RelativeDocumentMoniker": "GestionComercio\\FrmImagenNuevaModificar.cs",
-              "ToolTip": "C:\\Users\\aapan\\Downloads\\tp-winform-equipo-x\\GestionComercio\\FrmImagenNuevaModificar.cs",
-              "RelativeToolTip": "GestionComercio\\FrmImagenNuevaModificar.cs",
-              "ViewState": "AQIAAD8AAAAAAAAAAAAgwFMAAAAOAAAA",
+              "DocumentIndex": 2,
+              "Title": "FrmAltaArticulo.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\BBARRERA\\Desktop\\repo\\tp-winform-equipo-x\\GestionComercio\\FrmAltaArticulo.cs",
+              "RelativeDocumentMoniker": "GestionComercio\\FrmAltaArticulo.cs",
+              "ToolTip": "C:\\Users\\BBARRERA\\Desktop\\repo\\tp-winform-equipo-x\\GestionComercio\\FrmAltaArticulo.cs [Dise\u00F1o]",
+              "RelativeToolTip": "GestionComercio\\FrmAltaArticulo.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-13T19:25:43.084Z",
+              "WhenOpened": "2024-09-13T16:18:25.881Z",
+              "IsPinned": true,
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ImagenManager.cs",
+              "DocumentMoniker": "C:\\Users\\BBARRERA\\Desktop\\repo\\tp-winform-equipo-x\\Manager\\ImagenManager.cs",
+              "RelativeDocumentMoniker": "Manager\\ImagenManager.cs",
+              "ToolTip": "C:\\Users\\BBARRERA\\Desktop\\repo\\tp-winform-equipo-x\\Manager\\ImagenManager.cs",
+              "RelativeToolTip": "Manager\\ImagenManager.cs",
+              "ViewState": "AQIAAIAAAAAAAAAAAAAQwI8AAABiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-15T03:17:16.435Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "FrmAddMarcaYCategoria.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\aapan\\Downloads\\tp-winform-equipo-x\\GestionComercio\\FrmAddMarcaYCategoria.cs",
-              "RelativeDocumentMoniker": "GestionComercio\\FrmAddMarcaYCategoria.cs",
-              "ToolTip": "C:\\Users\\aapan\\Downloads\\tp-winform-equipo-x\\GestionComercio\\FrmAddMarcaYCategoria.cs [Dise\u00F1o]",
-              "RelativeToolTip": "GestionComercio\\FrmAddMarcaYCategoria.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-13T20:25:48.248Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FrmAddMarcaYCategoria.cs",
-              "DocumentMoniker": "C:\\Users\\aapan\\Downloads\\tp-winform-equipo-x\\GestionComercio\\FrmAddMarcaYCategoria.cs",
-              "RelativeDocumentMoniker": "GestionComercio\\FrmAddMarcaYCategoria.cs",
-              "ToolTip": "C:\\Users\\aapan\\Downloads\\tp-winform-equipo-x\\GestionComercio\\FrmAddMarcaYCategoria.cs",
-              "RelativeToolTip": "GestionComercio\\FrmAddMarcaYCategoria.cs",
-              "ViewState": "AQIAACoAAAAAAAAAAAAIwD4AAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-13T18:53:35.542Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "FrmAltaArticulo.cs",
-              "DocumentMoniker": "C:\\Users\\aapan\\Downloads\\tp-winform-equipo-x\\GestionComercio\\FrmAltaArticulo.cs",
+              "DocumentMoniker": "C:\\Users\\BBARRERA\\Desktop\\repo\\tp-winform-equipo-x\\GestionComercio\\FrmAltaArticulo.cs",
               "RelativeDocumentMoniker": "GestionComercio\\FrmAltaArticulo.cs",
-              "ToolTip": "C:\\Users\\aapan\\Downloads\\tp-winform-equipo-x\\GestionComercio\\FrmAltaArticulo.cs",
+              "ToolTip": "C:\\Users\\BBARRERA\\Desktop\\repo\\tp-winform-equipo-x\\GestionComercio\\FrmAltaArticulo.cs",
               "RelativeToolTip": "GestionComercio\\FrmAltaArticulo.cs",
-              "ViewState": "AQIAAKUAAAAAAAAAAAAAAD4AAAAMAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHABAABGAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-13T16:18:28.122Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ImagenManager.cs",
-              "DocumentMoniker": "C:\\Users\\aapan\\Downloads\\tp-winform-equipo-x\\Manager\\ImagenManager.cs",
-              "RelativeDocumentMoniker": "Manager\\ImagenManager.cs",
-              "ToolTip": "C:\\Users\\aapan\\Downloads\\tp-winform-equipo-x\\Manager\\ImagenManager.cs",
-              "RelativeToolTip": "Manager\\ImagenManager.cs",
-              "ViewState": "AQIAAHIAAAAAAAAAAAAkwDIAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-13T16:39:21.309Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CategoriaManager.cs",
-              "DocumentMoniker": "C:\\Users\\aapan\\Downloads\\tp-winform-equipo-x\\Manager\\CategoriaManager.cs",
-              "RelativeDocumentMoniker": "Manager\\CategoriaManager.cs",
-              "ToolTip": "C:\\Users\\aapan\\Downloads\\tp-winform-equipo-x\\Manager\\CategoriaManager.cs",
-              "RelativeToolTip": "Manager\\CategoriaManager.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAAgwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-13T20:26:35.325Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AccesoDatos.cs",
-              "DocumentMoniker": "C:\\Users\\aapan\\Downloads\\tp-winform-equipo-x\\Manager\\AccesoDatos.cs",
-              "RelativeDocumentMoniker": "Manager\\AccesoDatos.cs",
-              "ToolTip": "C:\\Users\\aapan\\Downloads\\tp-winform-equipo-x\\Manager\\AccesoDatos.cs",
-              "RelativeToolTip": "Manager\\AccesoDatos.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwB0AAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-13T18:50:53.982Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "FrmDetalle.cs",
-              "DocumentMoniker": "C:\\Users\\aapan\\Downloads\\tp-winform-equipo-x\\GestionComercio\\FrmDetalle.cs",
-              "RelativeDocumentMoniker": "GestionComercio\\FrmDetalle.cs",
-              "ToolTip": "C:\\Users\\aapan\\Downloads\\tp-winform-equipo-x\\GestionComercio\\FrmDetalle.cs",
-              "RelativeToolTip": "GestionComercio\\FrmDetalle.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-13T14:49:13.225Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "FrmDetalle.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\aapan\\Downloads\\tp-winform-equipo-x\\GestionComercio\\FrmDetalle.cs",
-              "RelativeDocumentMoniker": "GestionComercio\\FrmDetalle.cs",
-              "ToolTip": "C:\\Users\\aapan\\Downloads\\tp-winform-equipo-x\\GestionComercio\\FrmDetalle.cs [Dise\u00F1o]",
-              "RelativeToolTip": "GestionComercio\\FrmDetalle.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-13T13:55:26.891Z"
+              "WhenOpened": "2024-09-15T03:20:58.522Z",
+              "EditorCaption": ""
             }
           ]
         }
